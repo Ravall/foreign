@@ -3,39 +3,69 @@
 {% block page_title %}Пример страницы{% endblock %}
 
 {% block content %}
+<div id='page' class='row'>
+    <div id='header' class='row'>
+        <div class='small-6 large-6 columns'>
+            <h1>Изучаем английский язык</h1>
 
-    <div id='header' class=''>
-        <h1>Изучаем английский язык</h1>
-    </div>
-    <div>
-        <h2>Теория</h2>
+        </div>
+        <div class='navigation small-6 large-6 columns'>
         <ul>
-            <li><a href=''>Использование same, any</a></li>
-            <li><a href=''>Неопределенный артикль an/a</a></li>
-            <li><a href=''>Времена глаголов в английсокм языке</a></li>
-        </ul>
+                <li>Вход</li>
+                <li>Подписка</li>
+                <li>Найти учителя</li>
+            </ul>
     </div>
-    <div>
-        <h2>Практика</h2>
-        <ul>
-            <li><a href=''>Как заказать еду в ресторане на английском</a></li>
-        </ul>
     </div>
-    <div>
-        <h2>Сервисы, помогающие изучению языка</h2>
-        <ul>
-            <li><a href=''>Карточки запоминания</a></li>
-            <li><a href=''>Тесты с пояснениями</a></li>
-        </ul>
+
+
+
+    <div class='row'>
+        <div class='block theory small-3 large-3 columns'>
+            <h2>Теория<br/><small>theoretics</small></h2>
+        </div>
+        <div class='block praxis-light small-3 large-3 columns'>
+            <ul>
+                <li><a href=''>Как заказать еду в ресторане на английском</a></li>
+            </ul>
+        </div>
+        <div class='block services small-3 large-3 columns'>
+            <h2>Сервисы<br/><small>services</small></h2>
+        </div>
+        <div class='block other-light small-3 large-3 columns'>
+            <ul>
+                <li><a href=''>Методики изучения языка</a></li>
+                <li><a href=''>Какие книги нужно купить начинающему</a></li>
+                <li><a href=''>Для чего нужно знать английский язык</a></li>
+            </ul>
+        </div>
     </div>
-    <div>
-        <h2>Дополнительно</h2>
-        <ul>
-            <li><a href=''>Методики изучения языка</a></li>
-            <li><a href=''>Какие книги нужно купить начинающему</a></li>
-            <li><a href=''>Для чего нужно знать английский язык</a></li>
-        </ul>
+
+    <div class='row row2'>
+        <div class='block theory-light small-3 large-3 columns'>
+            <ul>
+                <li><a href=''>Использование same, any</a></li>
+                <li><a href=''>Неопределенный артикль an/a</a></li>
+                <li><a href=''>Времена глаголов в английсокм языке</a></li>
+            </ul>
+        </div>
+        <div class='block praxis small-3 large-3 columns'>
+            <h2>Практика<br/><small>praxis</small></h2>
+        </div>
+        <div class='block services-light small-3 large-3 columns'>
+            <ul>
+                <li><a href=''>Карточки запоминания</a></li>
+                <li><a href=''>Тесты с пояснениями</a></li>
+            </ul>
+        </div>
+        <div class='block other small-3 large-3 columns'>
+            <h2>Дополнительно<br/><small>other</small></h2>
+        </div>
     </div>
+
+
+
+</div>
 </body>
 </html>
 {% endblock %}

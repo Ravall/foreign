@@ -1,6 +1,89 @@
 @import "foundation/foundation.scss";
-div#header {
-    background: url(/static/img/header-texture.png)
-    repeat-x bottom center;
+@import url(http://fonts.googleapis.com/css?family=Poiret+One&subset=cyrillic);
+
+body {
+    h1,h2,h3 {
+        text-transform: uppercase;
+        color: #414042;
+        font-family: 'Poiret One';
+        small {
+            font-family: 'arial';
+            font-weight:normal;
+        }
+    }
+    h1 {
+        font-size:25px;
+    }
+    h2 {
+        font-size:20px;
+
+    }
+    /* background-color: #DCDCD9; */
+    div#page {
+        div.content {
+            padding:50px;
+        }
+        margin-top:60px;
+        background-color: #fff;
+
+
+        div#header {
+            margin: 0 50px;
+            height: 90px;
+
+
+            div.navigation {
+            ul {
+                padding-top:15px;
+                float:right;
+                text-transform: uppercase;
+                list-style-type:none;
+                li {
+                    float: left;
+                    margin-left: 10px;
+                    font-size:15px;
+                }
+            }
+        }
+
+        }
+
+
+        div.block {
+            height:200px;
+
+            ul {
+                list-style-type:none;
+                li {
+                    padding-bottom:5px;
+                }
+            }
+        }
+        div.theory {
+            background-color: #00e5ee;
+        }
+        div.theory-light {
+            background-color: #e0ffff;
+        }
+        div.praxis {
+            background-color: #ff82ab;
+        }
+        div.praxis-light {
+            background-color: #ffe4e1;
+        }
+        div.services {
+            background-color: #43cd80;
+        }
+        div.services-light {
+            background-color: #9aff9a;
+        }
+        div.other {
+            background-color: #ffec8b;
+        }
+        div.other-light {
+            background-color: #ffffe0;
+        }
+    }
+
 }
 
