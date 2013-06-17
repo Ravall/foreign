@@ -1,7 +1,30 @@
 @import "foundation/foundation.scss";
 @import url(http://fonts.googleapis.com/css?family=Poiret+One&subset=cyrillic);
 
+
+@mixin clear_ul {
+    /* ul без буллетов */
+    list-style-type:none;
+}
+
+div#scrollToTop {
+    display:none;
+    position:fixed;
+    left:30px;
+    top:30px;
+    cursor:pointer;
+    z-index:999
+}
+
 body {
+    p {
+        font-family: 'Verdana, Arial, Helvetica, sans-serif';
+        font-size: 1.1em;
+        line-height: 1.5;
+        text-align:left;
+        color: #666666;
+
+    }
     h1,h2,h3 {
         text-transform: uppercase;
         color: #414042;
@@ -18,71 +41,93 @@ body {
         font-size:20px;
 
     }
-    /* background-color: #DCDCD9; */
+    background-color: #f5f5f5;
+    /* background-color:#808080; */
     div#page {
         div.content {
             padding:50px;
         }
-        margin-top:60px;
+        margin-top:0px;
         background-color: #fff;
-
+        min-height:800px;
+        box-shadow: 0 0 5px rgba(0,0,0,0.3);
+        -moz-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+        -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.3);
 
         div#header {
             margin: 0 50px;
+            margin-top:50px;
             height: 90px;
+            border-bottom:solid 1px #E9E9E9;
 
 
             div.navigation {
             ul {
-                padding-top:15px;
-                float:right;
-                text-transform: uppercase;
+                float:left;
+
                 list-style-type:none;
                 li {
                     float: left;
-                    margin-left: 10px;
-                    font-size:15px;
+                    margin-right: 10px;
+                    font-size:14px;
                 }
             }
         }
+
+
+
 
         }
 
 
         div.block {
-            height:200px;
-
+            margin:0px;
             ul {
                 list-style-type:none;
                 li {
                     padding-bottom:5px;
                 }
             }
+            background-image: url("/static/img/main_line.png");
+            background-repeat: repeat-x;
+            background-position:bottom;
+            padding-bottom:10px;
+            padding-top:50px;
+            div.header {
+                @include grid-column($collapse:true);
+                @include grid-column($offset:1, $collapse:null,$float:false);
+                @include grid-column($columns:11,$collapse:null,$float:false);
+            }
         }
-        div.theory {
-            background-color: #00e5ee;
+        div.pre-footer {
+            background-image: none;
+            border-bottom:solid 1px #E9E9E9;
         }
-        div.theory-light {
-            background-color: #e0ffff;
+        div.service {
+            div.title {
+                text-align:center;
+            }
         }
-        div.praxis {
-            background-color: #ff82ab;
+
+        div#footer {
+            font: 12px/1.5 "Georgia", sans-serif;
+            padding-top:20px;
+            ul {
+                @include clear_ul;
+                li {
+                    a {
+                        color: #808080;
+                        text-decoration:underline;
+                        font-size:13px;
+                        &:hover {
+                            color:#000;
+                        }
+                    }
+                }
+            }
         }
-        div.praxis-light {
-            background-color: #ffe4e1;
-        }
-        div.services {
-            background-color: #43cd80;
-        }
-        div.services-light {
-            background-color: #9aff9a;
-        }
-        div.other {
-            background-color: #ffec8b;
-        }
-        div.other-light {
-            background-color: #ffffe0;
-        }
+
+
     }
 
 }
