@@ -9,3 +9,10 @@ def index(request):
         {},
         context_instance=RequestContext(request)
     )
+
+def use_a_any(request):
+    return render_to_response(
+        'frontend/article.html',
+        {},
+        context_instance=RequestContext(request)
+    )

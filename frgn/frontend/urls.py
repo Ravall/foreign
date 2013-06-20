@@ -7,8 +7,10 @@ from frontend import views
 
 # pylint: disable=C0103
 urlpatterns = patterns(
-    'frontend.views',
+    '',
     url(r'^$', views.index, name='index'),
+    url(r'^article/use_a_any$', views.use_a_any, name='article1'),
+
 )
 
 if settings.DEBUG:

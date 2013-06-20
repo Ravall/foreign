@@ -1,5 +1,6 @@
 {% extends 'frontend/base.html' %}
 {% load static %}
+{% load url from future %}
 {% block page_title %}Пример страницы{% endblock %}
 
 {% block content %}
@@ -10,12 +11,12 @@
         </div>
         <div class='navigation small-12 large-12 columns'>
             <ul>
-                <li>Теория</li>
-                <li>Практика</li>
-                <li>Сервисы</li>
-                <li>Психология обучения</li>
-                <li>Методики обучения</li>
-                <li>Языкознание</li>
+                <li><a href=''>Теория</a></li>
+                <li><a href=''>Практика</a></li>
+                <li><a href=''>Сервисы</a></li>
+                <li><a href=''>Психология обучения</a></li>
+                <li><a href=''>Методики обучения</a></li>
+                <li><a href=''>Языкознание</a></li>
             </ul>
     </div>
     </div>
@@ -25,16 +26,22 @@
             <img src='{% static 'img/english_language.jpg' %}'>
         </div>
 
-        <div class='small-6 large-5 large-offset-1 columns'>
+        <div class='small-6 large-5 large-offset-1 columns service'>
             <h2>Теория<br/><small>theoretics</small></h2>
             <ul>
-                <li><a href=''>Использование same, any</a></li>
+                <li>
+                    <a href="{% url 'article1' %}">
+                        Использование same, any
+                    </a>
+                </li>
                 <li><a href=''>Неопределенный артикль an/a</a></li>
                 <li><a href=''>Времена глаголов в английсокм языке</a></li>
+                <li class='all'> &rarr; <a href='' >Больше теоретических материалов</a></li>
             </ul>
              <h2>Практика<br/><small>praxis</small></h2>
              <ul>
                 <li><a href=''>Как заказать еду в ресторане на английском</a></li>
+                <li class='all'> &rarr; <a href='' class='all'>Больше практических  упражнений</a></li>
             </ul>
         </div>
     </div>
@@ -43,17 +50,42 @@
         <div class='small-6 large-6 columns service'>
             <div class='title'>
                 <h2>Карточки для запоминания</h2>
-                <img src='{% static 'img/memory_card.jpg' %}'>
             </div>
-            <p>Система Лейтнера (англ. Leitner system) — широко используемый метод для эффективного запоминания и повторения с помощью флэш-карточек, предложенный немецким ученым и журналистом Себастьяном Лейтнером в 70-е годы XX-го века.
-Эта система — простое применение принципа интервальных повторений, где карточки повторяются через увеличивающиеся интервалы.</p>
 
+            <div class='row'>
+                <div class='small-6 large-6 columns'>
+                    <img src='{% static 'img/memory_card.jpg' %}'>
+                </div>
+                <div class='small-6 large-6 columns links'>
+                    <ul>
+                        <li><a href=''>Начать</a></li>
+                        <li><a href=''>Правила</a></li>
+                        <li><a href=''>О системе Лейтнера</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p>Система Лейтнера — широко используемый метод для эффективного запоминания и повторения с помощью флэш-карточек, предложенный немецким ученым Себастьяном Лейтнером.
+            </p>
         </div>
+
         <div class='small-6 large-6 columns service'>
             <div class='title'>
-            <h2>Интерактивный тест</h2>
-            <img src='{% static 'img/interactive_test.jpg' %}'>
+                <h2>Интерактивный тест</h2>
             </div>
+
+            <div class='row'>
+                <div class='small-6 large-6 columns'>
+                    <img src='{% static 'img/interactive_test.jpg' %}'>
+                </div>
+                <div class='small-6 large-6 columns links'>
+                    <ul>
+                        <li><a href=''>Начать</a></li>
+                        <li><a href=''>Правила</a></li>
+                        <li><a href=''>О сервисе</a></li>
+                    </ul>
+                </div>
+            </div>
+
             <p>Тестирование, при ответе на каждый вопрос возникает текст с пояснениями. Такой подход в обучении достаточно эффективен</p>
         </div>
     </div>
@@ -68,6 +100,10 @@
             <ul>
                 <li><a href=''>Мотивация в изучении языка</a></li>
                 <li><a href=''>Гендерные особенности изучающих</a></li>
+                <li><a href=''>Когнитивный дисонанс в изучении</a></li>
+                <li><a href=''>НЛП и язык</a></li>
+                <li><a href=''>Архетип неведомой ебаной хуйни, как альтер эго ученика</a></li>
+                <li class='all'> &rarr; <a href=''>Все статьи по теме "психология обучения"</a></li>
             </ul>
         </div>
         <div class='small-4 large-4 columns service'>
@@ -79,6 +115,10 @@
             <ul>
                 <li><a href=''>Полезные книги</a></li>
                 <li><a href=''>25 кадр - ересь в которую верят.</a></li>
+                <li><a href=''>Метод старой шлюхи</a></li>
+                <li><a href=''>Метод Илоны Давыдовой</a></li>
+                <li><a href=''>Метод ебанутых ассоциаций</a></li>
+                <li class='all'> &rarr; <a href=''>Все статьи по теме "методика обучения"</a></li>
                 </ul>
         </div>
         <div class='small-4 large-4 columns service'>

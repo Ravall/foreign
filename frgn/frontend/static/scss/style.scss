@@ -1,5 +1,5 @@
 @import "foundation/foundation.scss";
-@import url(http://fonts.googleapis.com/css?family=Poiret+One&subset=cyrillic);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono);
 
 
 @mixin clear_ul {
@@ -17,8 +17,17 @@ div#scrollToTop {
 }
 
 body {
+    a {
+        color:#a67600;
+        text-decoration:underline;
+        font-size:1.1em;
+        &:hover {
+            color:#44281E;
+        }
+    }
+    font-family: 'Verdana, Arial, Helvetica, sans-serif';
     p {
-        font-family: 'Verdana, Arial, Helvetica, sans-serif';
+
         font-size: 1.1em;
         line-height: 1.5;
         text-align:left;
@@ -28,7 +37,7 @@ body {
     h1,h2,h3 {
         text-transform: uppercase;
         color: #414042;
-        font-family: 'Poiret One';
+        font-family: 'Ubuntu Mono', sans-serif;
         small {
             font-family: 'arial';
             font-weight:normal;
@@ -106,6 +115,15 @@ body {
         div.service {
             div.title {
                 text-align:center;
+            }
+            li.all {
+                a {
+                    color: #808080;
+                    font-size:0.9em;
+                    &:hover {
+                        color:#000;
+                    }
+                }
             }
         }
 
