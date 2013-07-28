@@ -1,0 +1,224 @@
+{% extends 'frontend/base.html' %}
+{% load static %}
+{% load url from future %}
+{% block page_title %}Пример страницы{% endblock %}
+
+{% block content %}
+<div id='page' class='row'>
+    <div id='header' class='row'>
+        <div class='small-12 large-12 columns'>
+            <div id='site_title'>Изучаем английский язык</div>
+        </div>
+        <div class='navigation small-12 large-12 columns'>
+            <ul>
+                <li><a href=''>Теория</a></li>
+                <li><a href=''>Практика</a></li>
+                <li><a href=''>Сервисы</a></li>
+                <li><a href=''>Психология обучения</a></li>
+                <li><a href=''>Методики обучения</a></li>
+                <li><a href=''>Языкознание</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class='article'>
+        <div class='row'>
+            <div class='small-5 large-5 large-centered columns '>
+                <h1>Использование same, any</h1>
+            </div>
+        </div>
+
+        <div class='row block pre-footer'>
+            <div class='small-7 large-7 push-1 columns'>
+            <h2>MUCH - MANY</h2>
+                <p>Much и  many обозначают «много», «больше количество», в вопросах  «how much?»  и «how many?» обозначают  «сколько?», «как много?».</p>
+
+                <p>Much используется с неисчисляемыми существительными, теми, которые мы не можем сосчитать поштучно, которые мы можем сосчитать только с помощью меры - килограмм, литр, упаковка, стакан и т.д.</p>
+
+                <blockquote>
+                    <span class='label'>Например:</span><br/>
+                    much water, much milk, much tea, much sugar<br/>
+                    <span class="round alert label">Важно!</span>
+                        <span class='translate'>money - неисчиляемое понятие</span><br/><br/>
+                    There is much water in the ocean -
+                        <span class='translate'>В океане много воды</span><br/>
+                    I haven’t got much money -
+                        <span class='translate'>у меня нет столько денег</span><br/>
+                    How much sugar have you got? -
+                        <span class='translate'>Сколько сахара у вас есть</span>
+                </blockquote>
+
+                <p> Many используется с исчиляемыми существительными, теми, которые мы можем      сосчитать поштучно - люди, деревья, коробки, друзья и т.д.<br>
+
+                    <blockquote>
+                        <span class='label'>Например:</span><br/>
+                        many friends, many people, many boxes, many apples, many cars<br/><br/>
+
+                        There are many people in the shop today. -
+                            <span class='translate'>Сегодня в магазине много людей</span><br/>
+                        We haven’t got many apples. -
+                            <span class='translate'>У нас не так много яблок</span><br/>
+                        How many friends have you got? -
+                            <span class='translate'>Сколько у тебя друзей</span><br/>
+                        <br/>
+                        <span class='label'>Сравните:</span><br/>
+
+                        How much milk is there on the table? -
+                            <span class='translate'>Сколько молока (неисчисляемое) на столе?</span><br/>
+                        How many bottles of milk have you got? -
+                           <span class='translate'>Сколько бутылок (исчисляемое) молока у тебя есть?</span<br/>
+                    </blockquote>
+
+                </p>
+
+                <p>
+                    Much и many можно заменять на «a lot of» в значении «много»<br/>
+
+                    <blockquote>
+                    I drink much tea  =  I drink a lot of tea.<br/>
+                    He reads many books = He reads a lot of books.<br/>
+                    </blockquote>
+                </p>
+
+            <h2>SOME  -  ANY</h2>
+
+                <p>
+                    Some обозначает что-то конкретное, определенное, а также некоторое количество, в таких случаях «some» не переводится или переводтся «несколько»
+
+                    <blockquote>
+                        I want some tea. -
+                            <span class='translate'>Я хочу чая.</span><br/>
+                        Buy some cheese, please. -
+                            <span class='translate'>Купи сыра, пожалуйста.</span><br/>
+                        I have some English books at home. -
+                            <span class='translate'>У меня есть несколько английских книг дома.</span><br/>
+                        Would you like some coffee? -
+                            <span class='translate'>Хочешь кофе?</span>
+                    </blockquote>
+                </p>
+
+                <p>Some+body/one обозначает «кто-то», подразумевая конкретного человека, в утвердительном предложении.<br/>
+
+                    <blockquote>
+                        Somebody called you today. -
+                            <span class='translate'>Кто-то звонил тебе сегодня.</span><br/>
+                        Someone is at the door. -
+                            <span class='translate'>Кто-то у двери.</span><br/>
+                    </blockquote>
+                </p>
+
+                <p>Some + thing обозначает «что-то», «кое-что»<br/>
+
+                    <blockquote>
+                    I want to tell you something. -
+                        <span class='translate'>Я хочу сказать тебе что-то.</span><br/>
+                    Something has happened. -
+                        <span class='translate'>Что-то случилось.</span>
+                    </blockquote>
+                </p>
+
+                <p>Some также сочетается с вопросительными словами  типа where, how и т.д. В таких  случаях some  обозначает «куда-то, как-то»<br/>
+
+                <blockquote>
+                    Where is Tom? - I don’t know, he has gone somewhere. -
+                        <span class='translate'>Где Том? - Не знаю, он куда-то пошел.</span><br/>
+                    Somehow we did it. -
+                        <span class='translate'>Как-то нам это удалось.</span>
+                </blockquote>
+                </p>
+
+            <h2>ANY</h2>
+
+                <p>Any обозначает что-то неконкретное, неопределенное. А также в значении «что угодно, какой угодно и т.д.»,  в таких случаях пишется слитно со вторым словом. Чаще всего используется в вопросах и в отрицании.<br/>
+                <blockquote>
+                    Have you got any sugar? -
+                        <span class='translate'>У тебя есть сахар?</span><br/>
+                    I don’t see any cars. -
+                        <span class='translate'>Не вижу никаких машин.</span><br/>
+                    You can come anytime. -
+                        <span class='translate'>Приходите в любое время, когда угодно.</span>
+                </blockquote>
+                </p>
+
+                <p>
+                    Any+body/one обозначает  «кто-либо», «кто-нибудь» и «кто угодно», «любой»
+
+                    <blockquote>
+                        Is anybody here? -
+                            <span class='translate'>Здесь есть кто-нибудь?</span><br/>
+                        Did anybody call me today? -
+                            <span class='translate'>Мне кто-нибудь звонил сегодня?</span><br/>
+                        Anyone can do it. -
+                            <span class='translate'>Кто угодно это сделает. </span><br/>
+                    </blockquote>
+                </p>
+
+                <p>
+                    Any+thing обозначает «что-либо», «что-нибудь»
+
+
+                    <blockquote>
+                        Did you see anything? -
+                            <span class='translate'>Ты что-нибудь видел?</span><br/>
+                        I didn’t buy anything. -
+                            <span class='translate'>Я ничего не купил.</span><br/>
+                        Would you like anything to eat? -
+                            <span class='translate'>Хотите что-нибудь поесть?</span>
+                    </blockquote>
+                </p>
+
+                <p>В сочетаниях  any+where, any+how  и т.д. обозначает или «куда-либо, как-либо и т.д.» или «куда угодно, как угодно»
+
+                    <blockquote>
+                        Did you travel anywhere? -
+                            <span class='translate'>Ты куда-нибудь ездил?</span><br/>
+                        We can go anywhere we like. -
+                            <span class='translate'>Можем пойти, куда захотим. </span><br/>
+                        You may cook dinner anyhow you like. -
+                            <span class='translate'>Можешь приготовить ужин, как тебе захочется.</span>
+                    </blockquote>
+                </p>
+
+            <h2>NOBODY, NOWHERE, NOTHING ETC.</h2>
+
+                <p>Для отрицания, в значениях «никто, ничего, никогда и т.д.» используется приставка no-
+
+                <blockquote>
+                    Nobody called today. -
+                        <span class='translate'>Сегодня никто не звонил.</span><br/>
+                    We have nothing to worry about. -
+                        <span class='translate'>Нам не о чем беспокоиться.</span><br/>
+                    He has howhere to go.
+                        <span class='translate'>-   Ему некуда пойти.</span>
+                </blockquote>
+                </p>
+            </div>
+            <div class='small-4 larg-4 columns'>
+
+            </div>
+        </div>
+    </div>
+    <div id='footer' class='row'>
+        <div class='small-5 large-4 large-offset-1 columns'>
+            (c) 2013. Изучаем английский язык.
+        </div>
+        <div class='small-3 large-3 columns'>
+            <ul>
+                <li><a href=''>Теория</a></li>
+                <li><a href=''>Практика</a></li>
+                <li><a href=''>Сервисы</a></li>
+                <li><a href=''>Психология обучения</a></li>
+                <li><a href=''>Методики обучения</a></li>
+                <li><a href=''>Языкознание</a></li>
+            </ul>
+        </div>
+        <div class='small-4 large-4 columns'>
+            <ul>
+                <li><a href=''>О проекте</a></li>
+                <li><a href=''>Контакты</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
