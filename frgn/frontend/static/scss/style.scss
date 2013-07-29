@@ -53,6 +53,7 @@ body {
     background-color: #f5f5f5;
     /* background-color:#808080; */
     div#page {
+        @extend .row;
         div.content {
             padding:50px;
         }
@@ -64,6 +65,12 @@ body {
         -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.3);
 
         div#header {
+            @extend .row;
+            div#site_title {
+                @extend h1;
+
+            }
+
             margin: 0 50px;
             margin-top:50px;
             height: 90px;
@@ -71,21 +78,20 @@ body {
 
 
             div.navigation {
-            ul {
-                float:left;
-
-                list-style-type:none;
-                li {
-                    float: left;
-                    margin-right: 10px;
-                    font-size:14px;
+                padding-left: 0px;
+                @extend .columns;
+                @extend .small-12;
+                @extend .large-12;
+                ul {
+                    float:left;
+                    list-style-type:none;
+                    li {
+                        float: left;
+                        margin-right: 10px;
+                        font-size:14px;
+                    }
                 }
             }
-        }
-
-
-
-
         }
 
 
@@ -128,6 +134,7 @@ body {
         }
 
         div#footer {
+            @extend .row;
             font: 12px/1.5 "Georgia", sans-serif;
             padding-top:20px;
             ul {
@@ -143,15 +150,32 @@ body {
                     }
                 }
             }
+
+            div#copy {
+                @extend .columns;
+                @extend .small-4;
+                @extend .large-4;
+            }
+
+            div#sections {
+                @extend .columns;
+                @extend .small-4;
+                @extend .large-4;
+            }
+
+            div#other_links {
+                @extend .columns;
+                @extend .small-4;
+                @extend .large-4;
+            }
         }
 
 
     }
 
 
-    div#site_title {
-        @extend h1;
-    }
+
+
     blockquote {
         font-size: 1.1em;
         line-height: 1.5;
@@ -161,6 +185,40 @@ body {
             font-size: 1em;
             font-style:italic;
         }
+    }
+
+    div.article {
+        div.header {
+            @extend .row;
+            div.title {
+                @extend .small-5;
+                @extend .large-5;
+                @extend .large-centered;
+                @extend .columns;
+                h1 {
+                    margin-top:50px;
+                }
+            }
+
+
+        }
+        div.content {
+            @extend .row;
+            @extend .block;
+            @extend .pre-footer;
+            div.left_column {
+                @extend .small-7;
+                @extend .large-7;
+                @extend .push-1;
+                @extend .columns;
+            }
+            div.right_column {
+                @extend .small-4;
+                @extend .large-4;
+                @extend .columns;
+            }
+        }
+
     }
 
 }

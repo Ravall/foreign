@@ -15,14 +15,11 @@
         rel="stylesheet"
         href="{% static "scss/style.scss" %}"
         charset="utf-8">
-
     {% endcompress %}
-
     {% compress js %}
-
         <script src="{% static "js/jquery-2.0.0.min.js" %}"></script>
         <script src="{% static "js/foundation/index.js" %}"></script>
     {% endcompress %}
 </head>
-<body>{% block content %}{% endblock %}</body>
+    <body>{% block content %}{% endblock %}</body>
 </html>

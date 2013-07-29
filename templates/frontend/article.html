@@ -1,75 +1,43 @@
-{% extends 'frontend/base.html' %}
+{% extends 'frontend/simple_layout.html' %}
 {% load static %}
 {% load url from future %}
 {% block page_title %}Пример страницы{% endblock %}
 
-{% block content %}
-<div id='page' class='row'>
-    <div id='header' class='row'>
-        <div class='small-12 large-12 columns'>
-            <div id='site_title'>Изучаем английский язык</div>
-        </div>
-        <div class='navigation small-12 large-12 columns'>
-            <ul>
-                <li><a href=''>Теория</a></li>
-                <li><a href=''>Практика</a></li>
-                <li><a href=''>Сервисы</a></li>
-                <li><a href=''>Психология обучения</a></li>
-                <li><a href=''>Методики обучения</a></li>
-                <li><a href=''>Языкознание</a></li>
-            </ul>
-        </div>
+{% block page_content %}
+<div class='header'>
+    <div class='title'>
+        <h1>Использование same, any</h1>
     </div>
+</div>
 
-    <div class='article'>
-        <div class='row'>
-            <div class='small-5 large-5 large-centered columns '>
-                <h1>Использование same, any</h1>
-            </div>
-        </div>
+<div class='content'>
+    <div class='left_column'>
+        <h2>MUCH - MANY</h2>
+        <p>Much и  many обозначают «много», «больше количество», в вопросах  «how much?»  и «how many?» обозначают  «сколько?», «как много?».</p>
+        <p>Much используется с неисчисляемыми существительными, теми, которые мы не можем сосчитать поштучно, которые мы можем сосчитать только с помощью меры - килограмм, литр, упаковка, стакан и т.д.</p>
+        <blockquote>
+            <span class='label'>Например:</span><br/>
+            much water, much milk, much tea, much sugar<br/>
+            <span class="round alert label">Важно!</span>
+            <span class='translate'>money - неисчиляемое понятие</span><br/><br/>
+            There is much water in the ocean - <span class='translate'>В океане много воды</span><br/>
+            I haven’t got much money - <span class='translate'>у меня нет столько денег</span><br/>
+            How much sugar have you got? - <span class='translate'>Сколько сахара у вас есть</span>
+        </blockquote>
+        <p> Many используется с исчиляемыми существительными, теми, которые мы можем      сосчитать поштучно - люди, деревья, коробки, друзья и т.д.</p>
+        <blockquote>
+            <span class='label'>Например:</span><br/>
+            many friends, many people, many boxes, many apples, many cars<br/><br/>
+            There are many people in the shop today. - <span class='translate'>Сегодня в магазине много людей</span><br/>
+            We haven’t got many apples. - <span class='translate'>У нас не так много яблок</span><br/>
+            How many friends have you got? - <span class='translate'>Сколько у тебя друзей</span><br/>
+            <br/>
+            <span class='label'>Сравните:</span><br/>
+            How much milk is there on the table? - <span class='translate'>Сколько молока (неисчисляемое) на столе?</span><br/>
+            How many bottles of milk have you got? - <span class='translate'>Сколько бутылок (исчисляемое) молока у тебя есть?</span<br/>
+        </blockquote>
 
-        <div class='row block pre-footer'>
-            <div class='small-7 large-7 push-1 columns'>
-            <h2>MUCH - MANY</h2>
-                <p>Much и  many обозначают «много», «больше количество», в вопросах  «how much?»  и «how many?» обозначают  «сколько?», «как много?».</p>
 
-                <p>Much используется с неисчисляемыми существительными, теми, которые мы не можем сосчитать поштучно, которые мы можем сосчитать только с помощью меры - килограмм, литр, упаковка, стакан и т.д.</p>
-
-                <blockquote>
-                    <span class='label'>Например:</span><br/>
-                    much water, much milk, much tea, much sugar<br/>
-                    <span class="round alert label">Важно!</span>
-                        <span class='translate'>money - неисчиляемое понятие</span><br/><br/>
-                    There is much water in the ocean -
-                        <span class='translate'>В океане много воды</span><br/>
-                    I haven’t got much money -
-                        <span class='translate'>у меня нет столько денег</span><br/>
-                    How much sugar have you got? -
-                        <span class='translate'>Сколько сахара у вас есть</span>
-                </blockquote>
-
-                <p> Many используется с исчиляемыми существительными, теми, которые мы можем      сосчитать поштучно - люди, деревья, коробки, друзья и т.д.<br>
-
-                    <blockquote>
-                        <span class='label'>Например:</span><br/>
-                        many friends, many people, many boxes, many apples, many cars<br/><br/>
-
-                        There are many people in the shop today. -
-                            <span class='translate'>Сегодня в магазине много людей</span><br/>
-                        We haven’t got many apples. -
-                            <span class='translate'>У нас не так много яблок</span><br/>
-                        How many friends have you got? -
-                            <span class='translate'>Сколько у тебя друзей</span><br/>
-                        <br/>
-                        <span class='label'>Сравните:</span><br/>
-
-                        How much milk is there on the table? -
-                            <span class='translate'>Сколько молока (неисчисляемое) на столе?</span><br/>
-                        How many bottles of milk have you got? -
-                           <span class='translate'>Сколько бутылок (исчисляемое) молока у тебя есть?</span<br/>
-                    </blockquote>
-
-                </p>
 
                 <p>
                     Much и many можно заменять на «a lot of» в значении «много»<br/>
@@ -193,32 +161,10 @@
                 </blockquote>
                 </p>
             </div>
-            <div class='small-4 larg-4 columns'>
+            <div class='right_column'>
 
             </div>
         </div>
-    </div>
-    <div id='footer' class='row'>
-        <div class='small-5 large-4 large-offset-1 columns'>
-            (c) 2013. Изучаем английский язык.
-        </div>
-        <div class='small-3 large-3 columns'>
-            <ul>
-                <li><a href=''>Теория</a></li>
-                <li><a href=''>Практика</a></li>
-                <li><a href=''>Сервисы</a></li>
-                <li><a href=''>Психология обучения</a></li>
-                <li><a href=''>Методики обучения</a></li>
-                <li><a href=''>Языкознание</a></li>
-            </ul>
-        </div>
-        <div class='small-4 large-4 columns'>
-            <ul>
-                <li><a href=''>О проекте</a></li>
-                <li><a href=''>Контакты</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
+
 
 {% endblock %}

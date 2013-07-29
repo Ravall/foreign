@@ -1,0 +1,42 @@
+{% extends 'frontend/base.html' %}
+{% block content %}
+<div id='page'>
+    <div id='header'>
+        <div id='site_title'>Изучаем английский язык</div>
+        <div class='navigation'>
+            <ul>
+                <li><a href=''>Теория</a></li>
+                <li><a href=''>Практика</a></li>
+                <li><a href=''>Сервисы</a></li>
+                <li><a href=''>Психология обучения</a></li>
+                <li><a href=''>Методики обучения</a></li>
+                <li><a href=''>Языкознание</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class='article'>{% block page_content %}{% endblock %}</div>
+
+    <div id='footer'>
+        <div id='copy'>
+            Изучаем английский язык.<br/>&copy; 2013.
+        </div>
+        <div id='sections'>
+            <ul>
+                <li><a href=''>Теория</a></li>
+                <li><a href=''>Практика</a></li>
+                <li><a href=''>Сервисы</a></li>
+                <li><a href=''>Психология обучения</a></li>
+                <li><a href=''>Методики обучения</a></li>
+                <li><a href=''>Языкознание</a></li>
+            </ul>
+        </div>
+        <div class='other_links'>
+            <ul>
+                <li><a href=''>О проекте</a></li>
+                <li><a href=''>Контакты</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
