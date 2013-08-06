@@ -94,8 +94,15 @@ ROOT_URLCONF = 'frgn.urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'frgn.wsgi.application'
 
+CACHE_API_TIMEOUT = 60*10
+API_URL = 'http://admin2.sancta.ru'
 
-
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': '/home/var/cache/'
+    },
+}
 
 INSTALLED_APPS = (
     'django.contrib.auth',

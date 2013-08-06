@@ -29,13 +29,11 @@
         <div class='small-6 large-5 large-offset-1 columns service'>
             <h2>Теория<br/><small>theoretics</small></h2>
             <ul>
+                {% for art in theoretics %}
                 <li>
-                    <a href="{% url 'article1' %}">
-                        Использование same, any
-                    </a>
+                    <a href="{% url 'article' art.name %}">{{ art.title }}</a>
                 </li>
-                <li><a href=''>Неопределенный артикль an/a</a></li>
-                <li><a href=''>Времена глаголов в английсокм языке</a></li>
+                {% endfor %}
                 <li class='all'> &rarr; <a href='' >Больше теоретических материалов</a></li>
             </ul>
              <h2>Практика<br/><small>praxis</small></h2>

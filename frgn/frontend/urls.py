@@ -9,7 +9,11 @@ from frontend import views
 urlpatterns = patterns(
     '',
     url(r'^$', views.index, name='index'),
-    url(r'^article/use_a_any$', views.use_a_any, name='article1'),
+    url(
+        r'^article/(?P<article_name>[0-9a-z_]+)$',
+        views.article,
+        name='article'
+    ),
 
 )
 
