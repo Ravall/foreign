@@ -34,7 +34,10 @@
                     <a href="{% url 'article' art.name %}">{{ art.title }}</a>
                 </li>
                 {% endfor %}
-                <li class='all'> &rarr; <a href='' >Больше теоретических материалов</a></li>
+
+                {% if theoretics_len > 10 %}
+                    <li class='all'> &rarr; <a href='' >Больше теоретических материалов</a></li>
+                {% endif %}
             </ul>
              <h2>Практика<br/><small>praxis</small></h2>
              <ul>
