@@ -21,7 +21,7 @@ def index(request):
         context_instance=RequestContext(request)
     )
 
-@cache_page(60 * 5)
+
 def article(request, article_name):
     content = utils.api_request(
         'engdel/article/{0}.json'.format(article_name)
