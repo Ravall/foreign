@@ -158,3 +158,6 @@ LOGGING = {
         },
     }
 }
+
+
+FRON_MAX_COUNT_ARTICLES = 5

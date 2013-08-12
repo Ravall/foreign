@@ -10,6 +10,11 @@ urlpatterns = patterns(
     '',
     url(r'^$', views.index, name='index'),
     url(
+        r'^theoretics/',
+        views.theoretics,
+        name='theoretics'
+    ),
+    url(
         r'^article/(?P<article_name>[0-9a-z_]+)$',
         views.article,
         name='article'

@@ -1,23 +1,23 @@
 {% extends 'frontend/simple_layout.html' %}
 {% load static %}
 {% load url from future %}
-{% block page_title %}Пример страницы{% endblock %}
+{% block page_title %}{{ content.text.title }}{% endblock %}
 
 {% block page_content %}
-<div class='header'>
-    <div class='title'>
-        <h1>{{ content.text.title }}</h1>
+<div class='article'>
+    <div class='header'>
+        <div class='title'>
+            <h1>{{ content.text.title }}</h1>
+        </div>
+    </div>
+
+    <div class='content'>
+        <div class='left_column'>
+            {% autoescape off %}
+            {{ content.text.content }}
+            {% endautoescape %}
+        </div>
+        <div class='right_column'></div>
     </div>
 </div>
-
-<div class='content'>
-    <div class='left_column'>
-        {% autoescape off %}
-        {{ content.text.content }}
-        {% endautoescape %}
-    </div>
-    <div class='right_column'></div>
-</div>
-
-
 {% endblock %}

@@ -1,25 +1,13 @@
-{% extends 'frontend/base.html' %}
+{% extends 'frontend/simple_layout.html' %}
 {% load static %}
 {% load url from future %}
 {% block page_title %}Пример страницы{% endblock %}
 
-{% block content %}
-<div id='page' class='row'>
-    <div id='header' class='row'>
-        <div class='small-12 large-12 columns'>
-            <h1>Изучаем английский язык</h1>
-        </div>
-        <div class='navigation small-12 large-12 columns'>
-            <ul>
-                <li><a href=''>Теория</a></li>
-                <li><a href=''>Практика</a></li>
-                <li><a href=''>Сервисы</a></li>
-                <li><a href=''>Психология обучения</a></li>
-                <li><a href=''>Методики обучения</a></li>
-                <li><a href=''>Языкознание</a></li>
-            </ul>
-    </div>
-    </div>
+{% block site_title %}
+    <h1><a href='{% url 'index' %}'>Изучаем английский язык</a><h1>
+{% endblock %}
+
+{% block page_content %}
 
     <div class='row block'>
         <div class='small-6 large-6 columns'>
@@ -35,8 +23,8 @@
                 </li>
                 {% endfor %}
 
-                {% if theoretics_len > 10 %}
-                    <li class='all'> &rarr; <a href='' >Больше теоретических материалов</a></li>
+                {% if theoretics_count > max_articles %}
+                    <li class='all'> &rarr; <a href='{% url 'theoretics' %}' >Больше теоретических материалов</a></li>
                 {% endif %}
             </ul>
              <h2>Практика<br/><small>praxis</small></h2>
@@ -46,7 +34,7 @@
             </ul>
         </div>
     </div>
-
+    <!--
     <div class='row block'>
         <div class='small-6 large-6 columns service'>
             <div class='title'>
@@ -90,7 +78,7 @@
             <p>Тестирование, при ответе на каждый вопрос возникает текст с пояснениями. Такой подход в обучении достаточно эффективен</p>
         </div>
     </div>
-
+    -->
     <div class='row block pre-footer'>
         <div class='small-4 large-4 columns service'>
             <div class='title'>
@@ -134,93 +122,5 @@
                 </ul>
         </div>
     </div>
-    <div id='footer' class='row'>
-        <div class='small-5 large-4 large-offset-1 columns'>
-            (c) 2013. Изучаем английский язык.
-        </div>
-        <div class='small-3 large-3 columns'>
-            <ul>
-                <li><a href=''>Теория</a></li>
-                <li><a href=''>Практика</a></li>
-                <li><a href=''>Сервисы</a></li>
-                <li><a href=''>Психология обучения</a></li>
-                <li><a href=''>Методики обучения</a></li>
-                <li><a href=''>Языкознание</a></li>
-            </ul>
-        </div>
-        <div class='small-4 large-4 columns'>
-            <ul>
-                <li><a href=''>О проекте</a></li>
-                <li><a href=''>Контакты</a></li>
-            </ul>
-        </div>
-
-    </div>
-<!--
-    <div class='row'>
-        <div class='block theory small-3 large-3 columns'>
-            <h2>Теория<br/><small>theoretics</small></h2>
-        </div>
-        <div class='block praxis-light small-3 large-3 columns'>
-            <ul>
-                <li><a href=''>Как заказать еду в ресторане на английском</a></li>
-            </ul>
-        </div>
-        <div class='block services small-3 large-3 columns'>
-            <h2>Сервисы<br/><small>services</small></h2>
-        </div>
-        <div class='block other-light small-3 large-3 columns'>
-            <ul>
-                <li><a href=''>Методики изучения языка</a></li>
-                <li><a href=''>Какие книги нужно купить начинающему</a></li>
-                <li><a href=''>Для чего нужно знать английский язык</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <div class='row row2'>
-        <div class='block theory-light small-3 large-3 columns'>
-            <ul>
-                <li><a href=''>Использование same, any</a></li>
-                <li><a href=''>Неопределенный артикль an/a</a></li>
-                <li><a href=''>Времена глаголов в английсокм языке</a></li>
-            </ul>
-        </div>
-        <div class='block praxis small-3 large-3 columns'>
-            <h2>Практика<br/><small>praxis</small></h2>
-        </div>
-        <div class='block services-light small-3 large-3 columns'>
-            <ul>
-                <li><a href=''>Карточки запоминания</a></li>
-                <li><a href=''>Тесты с пояснениями</a></li>
-            </ul>
-        </div>
-        <div class='block other small-3 large-3 columns'>
-            <h2>Дополнительно<br/><small>other</small></h2>
-        </div>
-    </div>
-
-
--->
-</div>
-</body>
-</html>
-<script>
-$(document).ready(function() {
-    $('body').append($("<div/>").attr("id","scrollToTop").html("<img src='{% static 'img/to_top.png' %}'/>").click(function () {
-        $('html,body').animate({scrollTop: 0}, 'slow');
-    }));
-
-    $(window).scroll(function() {
-        if ($(document).scrollTop() > 400) {
-            $("#scrollToTop").fadeIn(250);
-        } else {
-            $('#scrollToTop').fadeOut(250);
-        }
-    });
-})
-</script>
 
 {% endblock %}
-
-

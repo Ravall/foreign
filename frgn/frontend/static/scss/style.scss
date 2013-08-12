@@ -46,6 +46,11 @@ body {
 
     h1 {
         font-size:25px;
+        a {
+            text-decoration:none;
+            color: #414042;
+
+        }
     }
     h2 {
         font-size:20px;
@@ -74,7 +79,10 @@ body {
             @extend .row;
             div#site_title {
                 @extend h1;
-
+                a {
+                    text-decoration:none;
+                    color: #414042;
+                }
             }
 
             margin: 0 50px;
@@ -159,6 +167,7 @@ body {
 
             div#copy {
                 @extend .columns;
+                @extend .push-1;
                 @extend .small-4;
                 @extend .large-4;
             }

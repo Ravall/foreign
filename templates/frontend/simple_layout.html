@@ -1,11 +1,16 @@
 {% extends 'frontend/base.html' %}
+{% load static %}
 {% block content %}
 <div id='page'>
     <div id='header'>
-        <div id='site_title'>Изучаем английский язык</div>
+        <div id='site_title'>
+            {% block site_title %}
+            <a href='{% url 'index' %}'>Изучаем английский язык</a>
+            {% endblock %}
+        </div>
         <div class='navigation'>
             <ul>
-                <li><a href=''>Теория</a></li>
+                <li><a href='{% url 'theoretics' %}'>Теория</a></li>
                 <li><a href=''>Практика</a></li>
                 <li><a href=''>Сервисы</a></li>
                 <li><a href=''>Психология обучения</a></li>
@@ -15,7 +20,7 @@
         </div>
     </div>
 
-    <div class='article'>{% block page_content %}{% endblock %}</div>
+    {% block page_content %}{% endblock %}
 
     <div id='footer'>
         <div id='copy'>
@@ -23,7 +28,7 @@
         </div>
         <div id='sections'>
             <ul>
-                <li><a href=''>Теория</a></li>
+                <li><a href='{% url 'theoretics' %}'>Теория</a></li>
                 <li><a href=''>Практика</a></li>
                 <li><a href=''>Сервисы</a></li>
                 <li><a href=''>Психология обучения</a></li>
@@ -39,4 +44,22 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block block_js %}
+<script>
+$(document).ready(function() {
+    $('body').append($("<div/>").attr("id","scrollToTop").html("<img src='{% static 'img/to_top.png' %}'/>").click(function () {
+        $('html,body').animate({scrollTop: 0}, 'slow');
+    }));
+
+    $(window).scroll(function() {
+        if ($(document).scrollTop() > 400) {
+            $("#scrollToTop").fadeIn(250);
+        } else {
+            $('#scrollToTop').fadeOut(250);
+        }
+    });
+})
+</script>
 {% endblock %}

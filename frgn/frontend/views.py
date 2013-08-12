@@ -5,7 +5,21 @@ from django.template import RequestContext
 from django.http import Http404
 from django.views.decorators.cache import cache_page
 from control import utils
+from django.conf import settings
 
+
+def theoretics(request):
+    theoretics = utils.api_request(
+        'engdel/article/tag/{0}.json'.format('theoretics')
+    )
+    theoretics = json.loads(theoretics)
+    return render_to_response(
+        'frontend/theoretics.html',
+        {
+            'theoretics': theoretics
+        },
+        context_instance=RequestContext(request)
+    )
 
 def index(request):
     theoretics = utils.api_request(
@@ -15,8 +29,9 @@ def index(request):
     return render_to_response(
         'frontend/index.html',
         {
-            'theoretics': theoretics[0:10],
-            'theoretics_len': len(theoretics)
+            'theoretics': theoretics[0:settings.FRON_MAX_COUNT_ARTICLES],
+            'theoretics_count': len(theoretics),
+            'max_articles': settings.FRON_MAX_COUNT_ARTICLES
         },
         context_instance=RequestContext(request)
     )
@@ -24,6 +39,7 @@ def index(request):
 
 def article(request, article_name):
     content = utils.api_request(
+
         'engdel/article/{0}.json'.format(article_name)
     )
     if not content:

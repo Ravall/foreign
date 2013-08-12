@@ -1,0 +1,25 @@
+{% extends 'frontend/simple_layout.html' %}
+{% load static %}
+{% load url from future %}
+{% block page_title %}Теория английского языка{% endblock %}
+
+
+{% block page_content %}
+<div class='header'>
+    <div class='title'>
+        <h1>Теория английского языка</h1>
+    </div>
+</div>
+
+<div class='content'>
+<ul>
+    {% for art in theoretics %}
+    <li>
+        <a href="{% url 'article' art.name %}">{{ art.title }}</a>
+    </li>
+    {% endfor %}
+</ul>
+</div>
+
+
+{% endblock %}
