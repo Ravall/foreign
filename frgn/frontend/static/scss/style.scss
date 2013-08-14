@@ -1,6 +1,6 @@
 @import "foundation/foundation.scss";
 @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono);
-
+@import "table.scss";
 
 @mixin clear_ul {
     /* ul без буллетов */
@@ -28,7 +28,7 @@ body {
     font-family: 'Verdana, Arial, Helvetica, sans-serif';
     p, table {
 
-        font-size: 1.1em;
+        font-size: 18px;
         line-height: 1.5;
         text-align:left;
         color: #666666;
@@ -218,6 +218,26 @@ body {
 
         }
         div.content {
+
+            table {
+                @extend #ver-minimalist;
+                font-size:100%;
+                td, th {
+                    color:#666666;
+                    padding-top:20px;
+                }
+                th, tr:nth-child(2n), tr:nth-child(1) {
+                    background: none;
+                    border-bottom-color:none;
+                }
+                border:none;
+                thead {
+                    background: none;
+                    th {
+                        border-bottom-color:#666;
+                    }
+                }
+            }
             @extend .row;
             @extend .block;
             @extend .pre-footer;

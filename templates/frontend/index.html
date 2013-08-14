@@ -22,15 +22,17 @@
                     <a href="{% url 'article' art.name %}">{{ art.title }}</a>
                 </li>
                 {% endfor %}
-
-                {% if theoretics_count > max_articles %}
-                    <li class='all'> &rarr; <a href='{% url 'theoretics' %}' >Больше теоретических материалов</a></li>
-                {% endif %}
+                <li class='all'>
+                    &rarr; <a href='{% url 'theoretics' %}' >Больше теоретических материалов</a>
+                </li>
             </ul>
              <h2>Практика<br/><small>praxis</small></h2>
              <ul>
-                <li><a href=''>Как заказать еду в ресторане на английском</a></li>
-                <li class='all'> &rarr; <a href='' class='all'>Больше практических  упражнений</a></li>
+                {% for art in practice %}
+                <li>
+                    <a href="{% url 'article' art.name %}">{{ art.title }}</a>
+                </li>
+                {% endfor %}
             </ul>
         </div>
     </div>

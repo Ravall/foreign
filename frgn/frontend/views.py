@@ -21,17 +21,37 @@ def theoretics(request):
         context_instance=RequestContext(request)
     )
 
+
+def practice(request):
+    practice = utils.api_request(
+        'engdel/article/tag/{0}.json'.format('practice')
+    )
+    practice = json.loads(practice)
+    return render_to_response(
+        'frontend/practice.html',
+        {
+            'practice': practice
+        },
+        context_instance=RequestContext(request)
+    )
+
+
 def index(request):
+    # теоретические материалы
     theoretics = utils.api_request(
         'engdel/article/tag/{0}.json'.format('theoretics')
     )
     theoretics = json.loads(theoretics)
+    # практические материалы
+    practice = utils.api_request(
+        'engdel/article/tag/{0}.json'.format('practice')
+    )
+    practice = json.loads(practice)
     return render_to_response(
         'frontend/index.html',
         {
             'theoretics': theoretics[0:settings.FRON_MAX_COUNT_ARTICLES],
-            'theoretics_count': len(theoretics),
-            'max_articles': settings.FRON_MAX_COUNT_ARTICLES
+            'practice': practice[0:settings.FRON_MAX_COUNT_ARTICLES],
         },
         context_instance=RequestContext(request)
     )

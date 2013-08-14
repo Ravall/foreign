@@ -1,20 +1,20 @@
 {% extends 'frontend/simple_layout.html' %}
 {% load static %}
 {% load url from future %}
-{% block page_title %}Теория английского языка{% endblock %}
+{% block page_title %}Практика английского языка{% endblock %}
 
 
 {% block page_content %}
 <div class='article'>
 <div class='header'>
     <div class='title'>
-        <h1>Теория английского языка</h1>
+        <h1>Практика английского языка</h1>
     </div>
 </div>
 
 <div class='content'>
 <ul>
-    {% for art in theoretics %}
+    {% for art in practice %}
     <li>
         <a href="{% url 'article' art.name %}">{{ art.title }}</a>
     </li>
