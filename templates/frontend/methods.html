@@ -1,0 +1,26 @@
+{% extends 'frontend/simple_layout.html' %}
+{% load static %}
+{% load url from future %}
+{% block page_title %}Методики обучения английскому языку{% endblock %}
+
+
+{% block page_content %}
+<div class='article'>
+<div class='header'>
+    <div class='title'>
+        <h1>Методики обучения английскому языку</h1>
+    </div>
+</div>
+
+<div class='content'>
+<ul>
+    {% for art in methods %}
+    <li>
+        <a href="{% url 'article' art.name %}">{{ art.title }}</a>
+    </li>
+    {% endfor %}
+</ul>
+</div>
+</div>
+
+{% endblock %}

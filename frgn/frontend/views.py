@@ -7,6 +7,15 @@ from django.views.decorators.cache import cache_page
 from control import utils
 from django.conf import settings
 
+def _get_tag_articles(tag):
+    tag_articles = utils.api_request(
+        'engdel/article/tag/{0}.json'.format(tag)
+    )
+    tag_articles = json.loads(tag_articles)
+    return {
+        tag: tag_articles
+    }
+
 
 def theoretics(request):
     theoretics = utils.api_request(
@@ -35,6 +44,33 @@ def practice(request):
         context_instance=RequestContext(request)
     )
 
+def linguistics(request):
+    linguistics = utils.api_request(
+        'engdel/article/tag/{0}.json'.format('linguistics')
+    )
+    linguistics = json.loads(linguistics)
+    return render_to_response(
+        'frontend/linguistics.html',
+        {
+            'linguistics': linguistics
+        },
+        context_instance=RequestContext(request)
+    )
+
+def methods(request):
+    return render_to_response(
+        'frontend/methods.html',
+        _get_tag_articles('methods'),
+        context_instance=RequestContext(request)
+    )
+
+def psi(request):
+    return render_to_response(
+        'frontend/psi.html',
+        _get_tag_articles('psi'),
+        context_instance=RequestContext(request)
+    )
+
 
 def index(request):
     # теоретические материалы
@@ -47,11 +83,23 @@ def index(request):
         'engdel/article/tag/{0}.json'.format('practice')
     )
     practice = json.loads(practice)
+    # языкознание
+    linguistics = utils.api_request(
+        'engdel/article/tag/{0}.json'.format('linguistics')
+    )
+    linguistics = json.loads(linguistics)
+    # методолгоия
+    methods = _get_tag_articles('methods')
+    #психология
+    psi = _get_tag_articles('psi')
     return render_to_response(
         'frontend/index.html',
         {
             'theoretics': theoretics[0:settings.FRON_MAX_COUNT_ARTICLES],
             'practice': practice[0:settings.FRON_MAX_COUNT_ARTICLES],
+            'linguistics': linguistics[0:settings.FRON_MAX_COUNT_ARTICLES],
+            'methods': methods['methods'][0:settings.FRON_MAX_COUNT_ARTICLES],
+            'psi': psi['psi'][0:settings.FRON_MAX_COUNT_ARTICLES],
         },
         context_instance=RequestContext(request)
     )

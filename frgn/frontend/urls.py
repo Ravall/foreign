@@ -20,6 +20,21 @@ urlpatterns = patterns(
         name='practice'
     ),
     url(
+        r'^linguistics/',
+        views.linguistics,
+        name='linguistics'
+    ),
+    url(
+        r'^methods/',
+        views.methods,
+        name='methods'
+    ),
+    url(
+        r'^psi/',
+        views.psi,
+        name='psi'
+    ),
+    url(
         r'^article/(?P<article_name>[0-9a-z_]+)$',
         views.article,
         name='article'

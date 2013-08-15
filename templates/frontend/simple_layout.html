@@ -5,17 +5,17 @@
     <div id='header'>
         <div id='site_title'>
             {% block site_title %}
-            <a href='{% url 'index' %}'>Изучаем английский язык</a>
+            <a href='{% url 'index' %}'>Изучение английского языка</a>
             {% endblock %}
         </div>
         <div class='navigation'>
             <ul>
                 <li><a href='{% url 'theoretics' %}'>Теория</a></li>
                 <li><a href='{% url 'practice' %}'>Практика</a></li>
-                <li><a href=''>Сервисы</a></li>
-                <li><a href=''>Психология обучения</a></li>
-                <li><a href=''>Методики обучения</a></li>
-                <li><a href=''>Языкознание</a></li>
+                <!-- <li><a href=''>Сервисы</a></li> -->
+                <li><a href='{% url 'psi' %}'>Психология обучения</a></li>
+                <li><a href='{% url 'methods' %}'>Методики обучения</a></li>
+                <li><a href='{% url 'linguistics' %}'>Языкознание</a></li>
             </ul>
         </div>
     </div>
@@ -29,11 +29,11 @@
         <div id='sections'>
             <ul>
                 <li><a href='{% url 'theoretics' %}'>Теория</a></li>
-                <li><a href=''>Практика</a></li>
-                <li><a href=''>Сервисы</a></li>
-                <li><a href=''>Психология обучения</a></li>
-                <li><a href=''>Методики обучения</a></li>
-                <li><a href=''>Языкознание</a></li>
+                <li><a href='{% url 'practice' %}'>Практика</a></li>
+               <!-- <li><a href=''>Сервисы</a></li> -->
+                <li><a href='{% url 'psi' %}'>Психология обучения</a></li>
+                <li><a href='{% url 'methods' %}'>Методики обучения</a></li>
+                <li><a href='{% url 'linguistics' %}'>Языкознание</a></li>
             </ul>
         </div>
         <div class='other_links'>

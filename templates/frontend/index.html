@@ -1,10 +1,10 @@
 {% extends 'frontend/simple_layout.html' %}
 {% load static %}
 {% load url from future %}
-{% block page_title %}Пример страницы{% endblock %}
+{% block page_title %}Английский язык{% endblock %}
 
 {% block site_title %}
-    <h1><a href='{% url 'index' %}'>Изучаем английский язык</a><h1>
+    <h1><a href='{% url 'index' %}'>Изучение английского языка</a><h1>
 {% endblock %}
 
 {% block page_content %}
@@ -89,12 +89,11 @@
 
             </div>
             <ul>
-                <li><a href=''>Мотивация в изучении языка</a></li>
-                <li><a href=''>Гендерные особенности изучающих</a></li>
-                <li><a href=''>Когнитивный дисонанс в изучении</a></li>
-                <li><a href=''>НЛП и язык</a></li>
-                <li><a href=''>Архетип неведомой ебаной хуйни, как альтер эго ученика</a></li>
-                <li class='all'> &rarr; <a href=''>Все статьи по теме "психология обучения"</a></li>
+                {% for art in psi %}
+                <li>
+                    <a href="{% url 'article' art.name %}">{{ art.title }}</a>
+                </li>
+                {% endfor %}
             </ul>
         </div>
         <div class='small-4 large-4 columns service'>
@@ -104,13 +103,12 @@
 
             </div>
             <ul>
-                <li><a href=''>Полезные книги</a></li>
-                <li><a href=''>25 кадр - ересь в которую верят.</a></li>
-                <li><a href=''>Метод старой шлюхи</a></li>
-                <li><a href=''>Метод Илоны Давыдовой</a></li>
-                <li><a href=''>Метод ебанутых ассоциаций</a></li>
-                <li class='all'> &rarr; <a href=''>Все статьи по теме "методика обучения"</a></li>
-                </ul>
+                {% for art in methods %}
+                <li>
+                    <a href="{% url 'article' art.name %}">{{ art.title }}</a>
+                </li>
+                {% endfor %}
+            </ul>
         </div>
         <div class='small-4 large-4 columns service'>
             <div class='title'>
@@ -119,9 +117,12 @@
 
             </div>
             <ul>
-                <li><a href=''>Заимствания в языке</a></li>
-                <li><a href=''>Откуда произошел артикль "а"</a></li>
-                </ul>
+                {% for art in linguistics %}
+                <li>
+                    <a href="{% url 'article' art.name %}">{{ art.title }}</a>
+                </li>
+                {% endfor %}
+            </ul>
         </div>
     </div>
 
