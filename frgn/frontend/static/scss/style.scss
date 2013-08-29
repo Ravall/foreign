@@ -29,14 +29,39 @@ h1,h2,h3,h4 {
 body {
 
     div#theory_and_practice{
+        padding-top:30px;
+        padding-bottom:30px;
         background-color:#2c3e50;
         div#theory {
+            padding-top:30px;
             background-color:#3498db;
             h2 {
+                text-align: center;
                 color:#FFF;
                 font-size:18px;
                 text-transform: uppercase;
             }
+            ul {
+                list-style-type:none;
+                li {
+                    color:#FFF;
+                    padding-top:7px;
+                    a {
+                        color:#FFF;
+                        font-size:14px;
+                    }
+                }
+                li.more {
+                    text-align: center;
+                }
+                li.all {
+                    text-align: right;
+                    a {
+                        font-size:12px;
+                    }
+                }
+            }
+
         }
     }
 
