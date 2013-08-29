@@ -1,5 +1,7 @@
 @import "foundation/foundation.scss";
-@import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono);
+/* для заголовов */
+@import url(http://fonts.googleapis.com/css?family=Tenor+Sans);
+
 @import "table.scss";
 
 @mixin clear_ul {
@@ -16,16 +18,40 @@ div#scrollToTop {
     z-index:999
 }
 
+
+h1,h2,h3,h4 {
+
+    color: #414042;
+    font-family: 'Tenor Sans', sans-serif;
+    font-weight:400;
+}
+
 body {
+
+    div#theory_and_practice{
+        background-color:#2c3e50;
+        div#theory {
+            background-color:#3498db;
+            h2 {
+                color:#FFF;
+                font-size:18px;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+
+
     a {
-        color:#a67600;
+
         text-decoration:underline;
-        font-size:1.1em;
+        font-size:16px;
         &:hover {
             color:#44281E;
         }
+
     }
-    font-family: 'Verdana, Arial, Helvetica, sans-serif';
+
     p, table {
 
         font-size: 18px;
@@ -33,15 +59,6 @@ body {
         text-align:left;
         color: #666666;
 
-    }
-    h1,h2,h3,h4 {
-        text-transform: uppercase;
-        color: #414042;
-        font-family: 'Ubuntu Mono', sans-serif;
-        small {
-            font-family: 'arial';
-            font-weight:normal;
-        }
     }
 
     h1 {
@@ -53,7 +70,7 @@ body {
         }
     }
     h2 {
-        font-size:20px;
+        font-size:35px;
 
     }
     h3,h4 {
@@ -114,7 +131,7 @@ body {
             ul {
                 list-style-type:none;
                 li {
-                    padding-bottom:5px;
+                    padding-bottom:10px;
                 }
             }
             background-image: url("/static/img/main_line.png");
@@ -126,6 +143,14 @@ body {
                 @include grid-column($collapse:true);
                 @include grid-column($offset:1, $collapse:null,$float:false);
                 @include grid-column($columns:11,$collapse:null,$float:false);
+            }
+            .theory {
+                border-right:1px solid #E9E9E9;
+                h2 {
+                    padding-bottom: 5px;
+                    border-bottom: 2px solid #FF4500;
+                }
+
             }
         }
         div.pre-footer {
