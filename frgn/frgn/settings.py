@@ -106,6 +106,7 @@ CACHES = {
 }
 
 INSTALLED_APPS = (
+    'gunicorn',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
