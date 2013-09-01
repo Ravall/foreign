@@ -1,26 +1,36 @@
-{% extends 'frontend/simple_layout.html' %}
+{% extends 'frontend/category_layout.html' %}
 {% load static %}
 {% load url from future %}
-{% block page_title %}Методики обучения английскому языку{% endblock %}
 
-
-{% block page_content %}
-<div class='article'>
-<div class='header'>
-    <div class='title'>
-        <h1>Методики обучения английскому языку</h1>
-    </div>
-</div>
-
-<div class='content'>
-<ul>
-    {% for art in methods %}
-    <li>
-        <a href="{% url 'article' art.name %}">{{ art.title }}</a>
-    </li>
-    {% endfor %}
-</ul>
-</div>
-</div>
-
+{% block page_title %}
+    Методики обучения английскому языку
 {% endblock %}
+
+{% block tilte_category %}
+    Методики обучения английскому языку
+{% endblock %}
+
+{% block tilte_category_description %}
+    Статьи, в которых рассказываются о полезных учебникиках, о действенных или бесполезных методиках.
+{% endblock %}
+
+{% block methods_class %}class='active'{% endblock %}
+{% block category_class %}category_methods{% endblock %}
+
+{% block img_category %}
+    <img src='{% static 'img/methods.png' %}' width="150px">
+{% endblock %}
+
+{% block category_list %}
+<div class='push-2 small-8 large-8  columns'>
+    <ul>
+        {% for art in methods %}
+        <li>
+            <a href="{% url 'article' art.name %}">{{ art.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
+
+

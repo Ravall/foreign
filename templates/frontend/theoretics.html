@@ -1,26 +1,34 @@
-{% extends 'frontend/simple_layout.html' %}
+{% extends 'frontend/category_layout.html' %}
 {% load static %}
 {% load url from future %}
-{% block page_title %}Теория английского языка{% endblock %}
 
-
-{% block page_content %}
-<div class='article'>
-<div class='header'>
-    <div class='title'>
-        <h1>Теория английского языка</h1>
-    </div>
-</div>
-
-<div class='content'>
-<ul>
-    {% for art in theoretics %}
-    <li>
-        <a href="{% url 'article' art.name %}">{{ art.title }}</a>
-    </li>
-    {% endfor %}
-</ul>
-</div>
-</div>
-
+{% block page_title %}
+    Теория английского языка
 {% endblock %}
+
+{% block tilte_category %}
+    Теория английского языка
+{% endblock %}
+
+{% block tilte_category_description %}
+    Собрание теоретических материалов, раскрывающих ту или иную область знаний
+{% endblock %}
+
+
+{% block category_class %}category_theory{% endblock %}
+{% block img_category %}
+    <img src='{% static 'img/books.png' %}' width="150px">
+{% endblock %}
+
+{% block category_list %}
+<div class='push-2 small-8 large-8  columns'>
+    <ul>
+        {% for art in theoretics %}
+        <li>
+            <a href="{% url 'article' art.name %}">{{ art.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
+

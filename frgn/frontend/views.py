@@ -13,6 +13,7 @@ def _get_tag_articles(tag):
     )
     tag_articles = json.loads(tag_articles)
     return {
+        'category': tag,
         tag: tag_articles
     }
 
@@ -25,6 +26,7 @@ def theoretics(request):
     return render_to_response(
         'frontend/theoretics.html',
         {
+            'category': 'theoretics',
             'theoretics': theoretics
         },
         context_instance=RequestContext(request)
@@ -39,6 +41,7 @@ def practice(request):
     return render_to_response(
         'frontend/practice.html',
         {
+            'category': 'practice',
             'practice': practice
         },
         context_instance=RequestContext(request)
@@ -52,6 +55,7 @@ def linguistics(request):
     return render_to_response(
         'frontend/linguistics.html',
         {
+            'category': 'linguistics',
             'linguistics': linguistics
         },
         context_instance=RequestContext(request)
@@ -105,9 +109,15 @@ def index(request):
     )
 
 
-def article(request, article_name):
-    content = utils.api_request(
 
+def article(request, article_name):
+    def get_main_tag(tags):
+        for tag in ('theoretics', 'practice', 'linguistics', 'methods', 'psi'):
+            if tag in tags:
+                return tag
+        return ''
+
+    content = utils.api_request(
         'engdel/article/{0}.json'.format(article_name)
     )
     if not content:
@@ -116,7 +126,8 @@ def article(request, article_name):
     return render_to_response(
         'frontend/article.html',
         {
-            'content': content
+            'content': content,
+            'category': get_main_tag(content['tags']),
         },
         context_instance=RequestContext(request)
     )
