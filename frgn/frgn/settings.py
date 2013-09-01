@@ -71,7 +71,7 @@ TEMPLATE_LOADERS = (
     'django.template.loaders.app_directories.Loader',
 )
 TEMPLATE_DIRS = (
-    os.path.join(_PATH, '../', 'templates')
+    os.path.join(_PATH, '../', 'templates'),
 )
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
@@ -106,6 +106,7 @@ CACHES = {
 }
 
 INSTALLED_APPS = (
+    'frgn',
     'gunicorn',
     'django.contrib.auth',
     'django.contrib.contenttypes',
