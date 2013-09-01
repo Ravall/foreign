@@ -1,0 +1,94 @@
+{% extends 'frontend/base.html' %}
+{% load static %}
+{% load url from future %}
+
+{% block content %}
+<div class='category_header {% block category_class %}{% endblock %}'>
+    <div id='engde'>
+        <ul>
+            <li id='eng'>
+                <a class='site' href='{% url 'index' %}'>eng</a>
+                <div>
+                    <strong>
+                        Изучение<br/>английского языка
+                    </strong>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class='row'>
+        <div class='navigation'>
+            <ul>
+                <li {% if category == 'theoretics' %}class='active'{% endif %}>
+                    <a href='{% url 'theoretics' %}'>Теория</a>
+                </li>
+                <li {% if category == 'practice' %}class='active'{% endif %}>
+                    <a href='{% url 'practice' %}'>Практика</a>
+                </li>
+                <li {% if category == 'psi' %}class='active'{% endif %}>
+                    <a href='{% url 'psi' %}'>Психология обучения</a>
+                </li>
+                <li {% if category == 'methods' %}class='active'{% endif %}>
+                    <a href='{% url 'methods' %}'>Методики обучения</a>
+                </li>
+                <li {% if category == 'linguistics' %}class='active'{% endif %}>
+                    <a href='{% url 'linguistics' %}'>Языкознание</a>
+                </li>
+            </ul>
+        </div>
+        {% block img_category %}{% endblock %}
+        <h1>{% block tilte_category %}{% endblock %}</h1>
+        <div class='description'>
+            {% block tilte_category_description %}{%endblock%}
+        </div>
+    </div>
+</div>
+<div id='category_list'>
+    <div class='row'>
+        {% block category_list %}{% endblock %}
+    </div>
+</div>
+<div id='footer'>
+        <div class='row'>
+        <div id='copy'>
+            Изучаем английский язык.<br/>&copy; 2013.
+        </div>
+        <div id='sections'>
+            <ul>
+                <li><a href='{% url 'theoretics' %}'>Теория</a></li>
+                <li><a href='{% url 'practice' %}'>Практика</a></li>
+               <!-- <li><a href=''>Сервисы</a></li> -->
+                <li><a href='{% url 'psi' %}'>Психология обучения</a></li>
+                <li><a href='{% url 'methods' %}'>Методики обучения</a></li>
+                <li><a href='{% url 'linguistics' %}'>Языкознание</a></li>
+            </ul>
+        </div>
+        <div class='other_links'>
+            <ul>
+
+            </ul>
+        </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+
+{% block block_js %}
+<script>
+$(document).ready(function() {
+    $('body').append($("<div/>").attr("id","scrollToTop").html("<img src='{% static 'img/to_top.png' %}'/>").click(function () {
+        $('html,body').animate({scrollTop: 0}, 'slow');
+    }));
+
+    $(window).scroll(function() {
+        if ($(document).scrollTop() > 400) {
+            $("#scrollToTop").fadeIn(250);
+        } else {
+            $('#scrollToTop').fadeOut(250);
+        }
+    });
+})
+</script>
+{% endblock %}
+

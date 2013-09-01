@@ -1,0 +1,202 @@
+{% extends 'frontend/base.html' %}
+{% load static %}
+{% load url from future %}
+{% block page_title %}Английский язык{% endblock %}
+
+{% block site_title %}
+    <h1><a href='{% url 'index' %}'>Изучение английского языка</a><h1>
+{% endblock %}
+
+{% block content %}
+
+<div id='theory_and_practice'>
+    <div class='row'>
+        <div id='theory' class='push-1 small-4 large-4 columns '>
+            <div class='title'>
+                <h2>Теория</h2>
+                <img src='{% static 'img/books.png' %}' width="150px">
+                <div>
+                    Собрание теоретических материалов, расырывающих ту или иную область знаний
+                </div>
+            </div>
+            <ul>
+                {% for art in theoretics %}
+                <li>
+                    <a href="{% url 'article' art.name %}">{{ art.title }}</a>
+                </li>
+                {% endfor %}
+                <li class="more"> ... </li>
+                <li class='all'>
+                    <a href='{% url 'theoretics' %}' >Больше теоретических материалов</a>
+                </li>
+            </ul>
+        </div>
+
+        <div id='practica' class='pull-1 small-4 large-4 columns '>
+            <div class='title'>
+                <h2>Практика</h2>
+                <img src='{% static 'img/copybook.png' %}' width="150px">
+                <div>
+                    Теория немыслима без практики. Все то, что без чего нельзя обойтись в реальной жизни. Настоящие ситуации, практические задания, домашняя работа.
+                </div>
+            </div>
+            <ul>
+                {% for art in practice %}
+                <li>
+                    <a href="{% url 'article' art.name %}">{{ art.title }}</a>
+                </li>
+                {% endfor %}
+                <li class="more"> ... </li>
+                <li class='all'>
+                    <a href='{% url 'practice' %}' >Больше практических материалов</a>
+                </li>
+            </ul>
+        </div>
+
+
+    </div>
+</div>
+
+<div id='articles'>
+    <div class='row'>
+        <div id='psi' class='pull-1 small-4 large-4 columns '>
+            <div class='title'>
+                <h2>Психология обучения</h2>
+                <img src='{% static 'img/freud.png' %}' width="150px">
+                <div>
+                    Обучение новому языку тесно связано с психологическими особенностями обучающегося. Здесь приводится цикл статей с исследованиями обучаемости и мотивации.
+                </div>
+            </div>
+            <ul>
+                {% for art in psi %}
+                <li>
+                    <a href="{% url 'article' art.name %}">{{ art.title }}</a>
+                </li>
+                {% endfor %}
+                <li class="more"> ... </li>
+                <li class='all'>
+                    <a href='{% url 'psi' %}' >Больше теоретических материалов</a>
+                </li>
+            </ul>
+        </div>
+
+        <div id='methods' class='small-4 large-4 columns '>
+            <div class='title'>
+                <h2>Методология</h2>
+                <img src='{% static 'img/methods.png' %}' width="150px">
+                <div>
+                    Статьи, в которых рассказываются о полезных учебникиках, о действенных или бесполезных методиках.
+                </div>
+            </div>
+            <ul>
+                {% for art in methods %}
+                <li>
+                    <a href="{% url 'article' art.name %}">{{ art.title }}</a>
+                </li>
+                {% endfor %}
+                <li class="more"> ... </li>
+                <li class='all'>
+                    <a href='{% url 'methods' %}' >Больше методических материалов</a>
+                </li>
+            </ul>
+        </div>
+
+
+        <div id='linguistics' class='push-1 small-4 large-4 columns '>
+            <div class='title'>
+                <h2>Языкознание</h2>
+                <img src='{% static 'img/runes.png' %}' width="150px">
+                <div>
+                    Статьи на различные темы посвященные английскому языку в целом: о культуре, истории и развитии.
+                </div>
+            </div>
+            <ul>
+                {% for art in linguistics %}
+                <li>
+                    <a href="{% url 'article' art.name %}">{{ art.title }}</a>
+                </li>
+                {% endfor %}
+                <li class="more"> ... </li>
+                <li class='all'>
+                    <a href='{% url 'linguistics' %}' >Больше материалов по языкознанию</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+
+    <!--
+    <div class='row block'>
+        <div class='small-6 large-6 columns service'>
+            <div class='title'>
+                <h2>Карточки для запоминания</h2>
+            </div>
+
+            <div class='row'>
+                <div class='small-6 large-6 columns'>
+                    <img src='{% static 'img/memory_card.jpg' %}'>
+                </div>
+                <div class='small-6 large-6 columns links'>
+                    <ul>
+                        <li><a href=''>Начать</a></li>
+                        <li><a href=''>Правила</a></li>
+                        <li><a href=''>О системе Лейтнера</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p>Система Лейтнера — широко используемый метод для эффективного запоминания и повторения с помощью флэш-карточек, предложенный немецким ученым Себастьяном Лейтнером.
+            </p>
+        </div>
+
+        <div class='small-6 large-6 columns service'>
+            <div class='title'>
+                <h2>Интерактивный тест</h2>
+            </div>
+
+            <div class='row'>
+                <div class='small-6 large-6 columns'>
+                    <img src='{% static 'img/interactive_test.jpg' %}'>
+                </div>
+                <div class='small-6 large-6 columns links'>
+                    <ul>
+                        <li><a href=''>Начать</a></li>
+                        <li><a href=''>Правила</a></li>
+                        <li><a href=''>О сервисе</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <p>Тестирование, при ответе на каждый вопрос возникает текст с пояснениями. Такой подход в обучении достаточно эффективен</p>
+        </div>
+    </div>
+    -->
+
+
+
+    <div id='footer'>
+        <div class='row'>
+        <div id='copy'>
+            Изучаем английский язык.<br/>&copy; 2013.
+        </div>
+        <div id='sections'>
+            <ul>
+                <li><a href='{% url 'theoretics' %}'>Теория</a></li>
+                <li><a href='{% url 'practice' %}'>Практика</a></li>
+               <!-- <li><a href=''>Сервисы</a></li> -->
+                <li><a href='{% url 'psi' %}'>Психология обучения</a></li>
+                <li><a href='{% url 'methods' %}'>Методики обучения</a></li>
+                <li><a href='{% url 'linguistics' %}'>Языкознание</a></li>
+            </ul>
+        </div>
+        <div class='other_links'>
+            <ul>
+                <li><a href=''>О проекте</a></li>
+                <li><a href=''>Контакты</a></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+
+ {% endblock %}

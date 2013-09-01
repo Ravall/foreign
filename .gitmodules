@@ -1,0 +1,6 @@
+[submodule "foundation"]
+	path = foundation
+	url = https://github.com/zurb/foundation.git
+[submodule "control"]
+	path = control
+	url = https://github.com/Ravall/control.git
