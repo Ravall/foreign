@@ -39,6 +39,11 @@ urlpatterns = patterns(
         views.article,
         name='article'
     ),
+     url(
+        r'^page/about$',
+        views.page,
+        name='page'
+    ),
 
 )
 
