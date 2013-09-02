@@ -96,7 +96,7 @@ WSGI_APPLICATION = 'frgn.wsgi.application'
 
 CACHE_API_TIMEOUT = 60*60*24*3
 CACHE_API_TIMEOUT_FAST = 60*1
-API_URL = 'http://admin2.sancta.ru'
+API_URL = 'http://api.sancta.local' if not DEBUG else 'http://api.sancta.ru'
 
 CACHES = {
     'default': {
