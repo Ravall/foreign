@@ -54,7 +54,7 @@ STATIC_ROOT = os.path.abspath(
     os.path.join(_PATH, '../', 'files', 'collected_static')
 )
 STATIC_URL = '/static/'
-STATICFILES_DIRS = ()
+STATICFILES_DIRS = (MEDIA_ROOT,)
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
@@ -120,8 +120,8 @@ INSTALLED_APPS = (
     'djcompass'
 )
 
-COMPASS_INPUT = os.path.abspath(os.path.join(STATIC_ROOT, 'scss'))
-COMPASS_OUTPUT = os.path.abspath(os.path.join(STATIC_ROOT, 'css'))
+COMPASS_INPUT = os.path.abspath(os.path.join(MEDIA_ROOT, 'scss'))
+COMPASS_OUTPUT = os.path.abspath(os.path.join(MEDIA_ROOT, 'css'))
 COMPASS_STYLE = 'compressed'
 #COMPASS_REQUIRES = (
 #    'ninesixty',  # 960.gs Grid System
