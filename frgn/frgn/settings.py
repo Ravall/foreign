@@ -117,20 +117,15 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'south',
     'frontend',
-    'compressor'
+    'djcompass'
 )
 
-# compressor
-COMPRESS_REBUILD_TIMEOUT = 1
-COMPRESS_ENABLED = True
-COMPRESS_OUTPUT_DIR = 'min'
-COMPRESS_PRECOMPILERS = (
-    ('text/coffeescript', 'coffee --compile --stdio'),
-    ('text/less', 'lessc {infile} {outfile}'),
-    ('text/x-sass', 'sass {infile} {outfile}'),
-    ('text/x-scss', 'sass --scss {infile} {outfile}'),
-    ('text/stylus', 'stylus < {infile} > {outfile}'),
-)
+COMPASS_INPUT = os.path.abspath(os.path.join(STATIC_ROOT, 'scss'))
+COMPASS_OUTPUT = os.path.abspath(os.path.join(STATIC_ROOT, 'css'))
+COMPASS_STYLE = 'compressed'
+#COMPASS_REQUIRES = (
+#    'ninesixty',  # 960.gs Grid System
+#)
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
