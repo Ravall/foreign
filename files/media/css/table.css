@@ -1,0 +1,235 @@
+/* ------------------ styling for the tables ------------------   */
+/* line 5, ../scss/table.scss */
+#hor-minimalist-a { font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif; font-size: 12px; background: #fff; margin: 45px; width: 480px; border-collapse: collapse; text-align: left; }
+
+/* line 15, ../scss/table.scss */
+#hor-minimalist-a th { font-size: 14px; font-weight: normal; color: #039; padding: 10px 8px; border-bottom: 2px solid #6678b1; }
+
+/* line 23, ../scss/table.scss */
+#hor-minimalist-a td { color: #669; padding: 9px 8px 0px 8px; }
+
+/* line 28, ../scss/table.scss */
+#hor-minimalist-a tbody tr:hover td { color: #009; }
+
+/* line 34, ../scss/table.scss */
+#hor-minimalist-b { font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif; font-size: 12px; background: #fff; margin: 45px; width: 480px; border-collapse: collapse; text-align: left; }
+
+/* line 44, ../scss/table.scss */
+#hor-minimalist-b th { font-size: 14px; font-weight: normal; color: #039; padding: 10px 8px; border-bottom: 2px solid #6678b1; }
+
+/* line 52, ../scss/table.scss */
+#hor-minimalist-b td { border-bottom: 1px solid #cccccc; color: #669; padding: 6px 8px; }
+
+/* line 58, ../scss/table.scss */
+#hor-minimalist-b tbody tr:hover td { color: #009; }
+
+/* line 64, ../scss/table.scss */
+#ver-minimalist { font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif; font-size: 12px; margin: 45px; width: 480px; text-align: left; border-collapse: collapse; }
+
+/* line 73, ../scss/table.scss */
+#ver-minimalist th { padding: 8px 2px; font-weight: normal; font-size: 14px; border-bottom: 2px solid #6678b1; border-right: 30px solid white; border-left: 30px solid white; color: #039; }
+
+/* line 83, ../scss/table.scss */
+#ver-minimalist td { padding: 12px 2px 0px 2px; border-right: 30px solid white; border-left: 30px solid white; color: #669; }
+
+/* line 90, ../scss/table.scss */
+#ver-minimalist .vzebra-odd { background: #eff2ff; }
+
+/* line 93, ../scss/table.scss */
+#ver-minimalist tr.even, #ver-minimalist tr.alt, #ver-minimalist tr:nth-of-type(even) { background: #f5f5f5; }
+
+/* line 99, ../scss/table.scss */
+#box-table-a { font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif; font-size: 12px; margin: 45px; width: 480px; text-align: left; border-collapse: collapse; }
+
+/* line 108, ../scss/table.scss */
+#box-table-a th { font-size: 13px; font-weight: normal; padding: 8px; background: #b9c9fe; border-top: 4px solid #aabcfe; border-bottom: 1px solid white; color: #039; }
+
+/* line 118, ../scss/table.scss */
+#box-table-a td { padding: 8px; background: #e8edff; border-bottom: 1px solid white; color: #669; border-top: 1px solid transparent; }
+
+/* line 126, ../scss/table.scss */
+#box-table-a tr:hover td { background: #d0dafd; color: #339; }
+
+/* line 133, ../scss/table.scss */
+#box-table-b { font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif; font-size: 12px; margin: 45px; width: 480px; text-align: center; border-collapse: collapse; border-top: 7px solid #9baff1; border-bottom: 7px solid #9baff1; }
+
+/* line 144, ../scss/table.scss */
+#box-table-b th { font-size: 13px; font-weight: normal; padding: 8px; background: #e8edff; border-right: 1px solid #9baff1; border-left: 1px solid #9baff1; color: #039; }
+
+/* line 154, ../scss/table.scss */
+#box-table-b td { padding: 8px; background: #e8edff; border-right: 1px solid #aabcfe; border-left: 1px solid #aabcfe; color: #669; }
+
+/* line 164, ../scss/table.scss */
+#hor-zebra { font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif; font-size: 12px; margin: 45px; width: 480px; text-align: left; border-collapse: collapse; }
+
+/* line 173, ../scss/table.scss */
+#hor-zebra th { font-size: 14px; font-weight: normal; padding: 10px 8px; color: #039; }
+
+/* line 180, ../scss/table.scss */
+#hor-zebra td { padding: 8px; color: #669; }
+
+/* line 185, ../scss/table.scss */
+#hor-zebra .odd { background: #e8edff; }
+
+/* line 191, ../scss/table.scss */
+#ver-zebra { font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif; font-size: 12px; margin: 45px; width: 480px; text-align: left; border-collapse: collapse; }
+
+/* line 200, ../scss/table.scss */
+#ver-zebra th { font-size: 14px; font-weight: normal; padding: 12px 15px; border-right: 1px solid white; border-left: 1px solid white; color: #039; }
+
+/* line 209, ../scss/table.scss */
+#ver-zebra td { padding: 8px 15px; border-right: 1px solid white; border-left: 1px solid white; color: #669; }
+
+/* line 216, ../scss/table.scss */
+.vzebra-odd { background: #eff2ff; }
+
+/* line 220, ../scss/table.scss */
+.vzebra-even { background: #e8edff; }
+
+/* line 224, ../scss/table.scss */
+#ver-zebra #vzebra-adventure, #ver-zebra #vzebra-children { background: #d0dafd; border-bottom: 1px solid #c8d4fd; }
+
+/* line 229, ../scss/table.scss */
+#ver-zebra #vzebra-comedy, #ver-zebra #vzebra-action { background: #dce4ff; border-bottom: 1px solid #d6dfff; }
+
+/* line 236, ../scss/table.scss */
+#one-column-emphasis { font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif; font-size: 12px; margin: 45px; width: 480px; text-align: left; border-collapse: collapse; }
+
+/* line 245, ../scss/table.scss */
+#one-column-emphasis th { font-size: 14px; font-weight: normal; padding: 12px 15px; color: #039; }
+
+/* line 252, ../scss/table.scss */
+#one-column-emphasis td { padding: 10px 15px; color: #669; border-top: 1px solid #e8edff; }
+
+/* line 258, ../scss/table.scss */
+.oce-first { background: #d0dafd; border-right: 10px solid transparent; border-left: 10px solid transparent; }
+
+/* line 264, ../scss/table.scss */
+#one-column-emphasis tr:hover td { color: #339; background: #eff2ff; }
+
+/* line 271, ../scss/table.scss */
+#newspaper-a { font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif; font-size: 12px; margin: 45px; width: 480px; text-align: left; border-collapse: collapse; border: 1px solid #6699cc; }
+
+/* line 281, ../scss/table.scss */
+#newspaper-a th { padding: 12px 17px 12px 17px; font-weight: normal; font-size: 14px; color: #039; border-bottom: 1px dashed #6699cc; }
+
+/* line 289, ../scss/table.scss */
+#newspaper-a td { padding: 7px 17px 7px 17px; color: #669; }
+
+/* line 294, ../scss/table.scss */
+#newspaper-a tbody tr:hover td { color: #339; background: #d0dafd; }
+
+/* line 301, ../scss/table.scss */
+#newspaper-b { font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif; font-size: 12px; margin: 45px; width: 480px; text-align: left; border-collapse: collapse; border: 1px solid #6699cc; }
+
+/* line 311, ../scss/table.scss */
+#newspaper-b th { padding: 15px 10px 10px 10px; font-weight: normal; font-size: 14px; color: #039; }
+
+/* line 318, ../scss/table.scss */
+#newspaper-b tbody { background: #e8edff; }
+
+/* line 322, ../scss/table.scss */
+#newspaper-b td { padding: 10px; color: #669; border-top: 1px dashed white; }
+
+/* line 328, ../scss/table.scss */
+#newspaper-b tbody tr:hover td { color: #339; background: #d0dafd; }
+
+/* line 335, ../scss/table.scss */
+#newspaper-c { font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif; font-size: 12px; margin: 45px; width: 480px; text-align: left; border-collapse: collapse; border: 1px solid #66ccff; }
+
+/* line 345, ../scss/table.scss */
+#newspaper-c th { padding: 20px; font-weight: normal; font-size: 13px; color: #039; text-transform: uppercase; border-right: 1px solid #0865c2; border-top: 1px solid #0865c2; border-left: 1px solid #0865c2; border-bottom: 1px solid white; }
+
+/* line 357, ../scss/table.scss */
+#newspaper-c td { padding: 10px 20px; color: #669; border-right: 1px dashed #66ccff; }
+
+/* line 365, ../scss/table.scss */
+#rounded-corner { font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif; font-size: 12px; margin: 45px; width: 480px; text-align: left; border-collapse: collapse; }
+
+/* line 374, ../scss/table.scss */
+#rounded-corner thead th.rounded-company { background: #b9c9fe url("table-images/left.png") left -1px no-repeat; }
+
+/* line 378, ../scss/table.scss */
+#rounded-corner thead th.rounded-q4 { background: #b9c9fe url("table-images/right.png") right -1px no-repeat; }
+
+/* line 382, ../scss/table.scss */
+#rounded-corner th { padding: 8px; font-weight: normal; font-size: 13px; color: #039; background: #b9c9fe; }
+
+/* line 390, ../scss/table.scss */
+#rounded-corner td { padding: 8px; background: #e8edff; border-top: 1px solid white; color: #669; }
+
+/* line 397, ../scss/table.scss */
+#rounded-corner tfoot td.rounded-foot-left { background: #e8edff url("table-images/botleft.png") left bottom no-repeat; }
+
+/* line 401, ../scss/table.scss */
+#rounded-corner tfoot td.rounded-foot-right { background: #e8edff url("table-images/botright.png") right bottom no-repeat; }
+
+/* line 405, ../scss/table.scss */
+#rounded-corner tbody tr:hover td { background: #d0dafd; }
+
+/* line 411, ../scss/table.scss */
+#background-image { font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif; font-size: 12px; margin: 45px; width: 480px; text-align: left; border-collapse: collapse; background: url("table-images/blurry.jpg") 330px 59px no-repeat; }
+
+/* line 421, ../scss/table.scss */
+#background-image th { padding: 12px; font-weight: normal; font-size: 14px; color: #339; }
+
+/* line 428, ../scss/table.scss */
+#background-image td { padding: 9px 12px; color: #669; border-top: 1px solid white; }
+
+/* line 434, ../scss/table.scss */
+#background-image tfoot td { font-size: 11px; }
+
+/* line 438, ../scss/table.scss */
+#background-image tbody td { background: url("table-images/back.png"); }
+
+/* line 442, ../scss/table.scss */
+* html #background-image tbody td { /* ---------------------------- PUT THIS ON IE6 ONLY STYLE AS THE RULE INVALIDATES YOUR STYLESHEET ----------------------------
+*/ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='table-images/back.png',sizingMethod='crop'); background: none; }
+
+/* line 454, ../scss/table.scss */
+#background-image tbody tr:hover td { color: #339; background: none; }
+
+/* line 461, ../scss/table.scss */
+#gradient-style { font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif; font-size: 12px; margin: 45px; width: 480px; text-align: left; border-collapse: collapse; }
+
+/* line 470, ../scss/table.scss */
+#gradient-style th { font-size: 13px; font-weight: normal; padding: 8px; background: #b9c9fe url("table-images/gradhead.png") repeat-x; border-top: 2px solid #d3ddff; border-bottom: 1px solid white; color: #039; }
+
+/* line 480, ../scss/table.scss */
+#gradient-style td { padding: 8px; border-bottom: 1px solid white; color: #669; border-top: 1px solid white; background: #e8edff url("table-images/gradback.png") repeat-x; }
+
+/* line 488, ../scss/table.scss */
+#gradient-style tfoot tr td { background: #e8edff; font-size: 12px; color: #99c; }
+
+/* line 494, ../scss/table.scss */
+#gradient-style tbody tr:hover td { background: #d0dafd url("table-images/gradhover.png") repeat-x; color: #339; }
+
+/* line 501, ../scss/table.scss */
+#pattern-style-a { font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif; font-size: 12px; margin: 45px; width: 480px; text-align: left; border-collapse: collapse; background: url("table-images/pattern.png"); }
+
+/* line 511, ../scss/table.scss */
+#pattern-style-a thead tr { background: url("table-images/pattern-head.png"); }
+
+/* line 515, ../scss/table.scss */
+#pattern-style-a th { font-size: 13px; font-weight: normal; padding: 8px; border-bottom: 1px solid white; color: #039; }
+
+/* line 523, ../scss/table.scss */
+#pattern-style-a td { padding: 8px; border-bottom: 1px solid white; color: #669; border-top: 1px solid transparent; }
+
+/* line 530, ../scss/table.scss */
+#pattern-style-a tbody tr:hover td { color: #339; background: #fff; }
+
+/* line 537, ../scss/table.scss */
+#pattern-style-b { font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif; font-size: 12px; margin: 45px; width: 480px; text-align: left; border-collapse: collapse; background: url("table-images/patternb.png"); }
+
+/* line 547, ../scss/table.scss */
+#pattern-style-b thead tr { background: url("table-images/patternb-head.png"); }
+
+/* line 551, ../scss/table.scss */
+#pattern-style-b th { font-size: 13px; font-weight: normal; padding: 8px; border-bottom: 1px solid white; color: #039; }
+
+/* line 559, ../scss/table.scss */
+#pattern-style-b td { padding: 8px; border-bottom: 1px solid white; color: #669; border-top: 1px solid transparent; }
+
+/* line 566, ../scss/table.scss */
+#pattern-style-b tbody tr:hover td { color: #339; background: #cdcdee; }
