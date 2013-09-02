@@ -1,0 +1,35 @@
+{% extends 'frontend/category_layout.html' %}
+{% load static %}
+{% load url from future %}
+
+{% block page_title %}
+    Психология обучения английскому языку
+{% endblock %}
+
+{% block tilte_category %}
+    Психология обучения английскому языку
+{% endblock %}
+
+{% block tilte_category_description %}
+    Обучение новому языку тесно связано с психологическими особенностями обучающегося. <br/>
+    Здесь приводится цикл статей с исследованиями обучаемости и мотивации.
+{% endblock %}
+
+{% block psi_class %}class='active'{% endblock %}
+{% block category_class %}category_psi{% endblock %}
+
+{% block img_category %}
+    <img src='{% static 'img/freud.png' %}' width="150px">
+{% endblock %}
+
+{% block category_list %}
+<div class='push-2 small-8 large-8  columns'>
+    <ul>
+        {% for art in psi %}
+        <li>
+            <a href="{% url 'article' art.name %}">{{ art.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

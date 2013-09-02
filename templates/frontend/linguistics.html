@@ -1,0 +1,34 @@
+{% extends 'frontend/category_layout.html' %}
+{% load static %}
+{% load url from future %}
+
+{% block page_title %}
+    Языкознание английского языка
+{% endblock %}
+
+{% block tilte_category %}
+    Языкознание английского языка
+{% endblock %}
+
+{% block tilte_category_description %}
+    Статьи на различные темы посвященные английскому языку в целом: о культуре, истории и развитии.
+{% endblock %}
+
+{% block linguistics_class %}class='active'{% endblock %}
+{% block category_class %}category_linguistics{% endblock %}
+
+{% block img_category %}
+    <img src='{% static 'img/runes.png' %}' width="150px">
+{% endblock %}
+
+{% block category_list %}
+<div class='push-2 small-8 large-8  columns'>
+    <ul>
+        {% for art in linguistics %}
+        <li>
+            <a href="{% url 'article' art.name %}">{{ art.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
