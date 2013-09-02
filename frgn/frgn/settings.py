@@ -12,6 +12,7 @@ TEMPLATE_DEBUG = DEBUG
 SEND_BROKEN_LINK_EMAILS = True
 
 SERVER_EMAIL = 'robot@engdel.ru'
+DEFAULT_FROM_EMAIL = SERVER_EMAIL
 MANAGERS = (('Ravall', 'valery.ravall@gmail.com'),)
 ADMINS = MANAGERS
 
@@ -31,7 +32,7 @@ else:
 
 API_URL = 'http://api.sancta.local' if not DEBUG else 'http://api.sancta.ru'
 
-DEBUG = False
+#DEBUG = False
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
