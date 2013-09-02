@@ -7,6 +7,10 @@ import platform
 _PATH = os.path.abspath(os.path.dirname(__file__) + '/../')
 DEBUG = platform.node() != 'sancta'
 TEMPLATE_DEBUG = DEBUG
+
+# отправка на почту писем о поломанных ссылках
+SEND_BROKEN_LINK_EMAILS = True
+
 SERVER_EMAIL = 'valery.ravall@gmail.com'
 ADMINS = (
     ('Ravall', SERVER_EMAIL),
@@ -27,9 +31,13 @@ if DEBUG:
 else:
     from production import DATABASES
 
+API_URL = 'http://api.sancta.local' if not DEBUG else 'http://api.sancta.ru'
+
+#DEBUG = False
+
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = ['engdel.ru']
+ALLOWED_HOSTS = ['engdel.ru', '127.0.0.1']
 
 
 TIME_ZONE = 'Europe/Moscow'
@@ -96,7 +104,7 @@ WSGI_APPLICATION = 'frgn.wsgi.application'
 
 CACHE_API_TIMEOUT = 60*60*24*3
 CACHE_API_TIMEOUT_FAST = 60*1
-API_URL = 'http://api.sancta.local' if not DEBUG else 'http://api.sancta.ru'
+
 
 CACHES = {
     'default': {
