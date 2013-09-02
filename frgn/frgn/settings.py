@@ -7,6 +7,10 @@ import platform
 _PATH = os.path.abspath(os.path.dirname(__file__) + '/../')
 DEBUG = platform.node() != 'sancta'
 TEMPLATE_DEBUG = DEBUG
+
+# отправка на почту писем о поломанных ссылках
+SEND_BROKEN_LINK_EMAILS = True
+
 SERVER_EMAIL = 'valery.ravall@gmail.com'
 ADMINS = (
     ('Ravall', SERVER_EMAIL),
@@ -27,9 +31,13 @@ if DEBUG:
 else:
     from production import DATABASES
 
+API_URL = 'http://api.sancta.local' if not DEBUG else 'http://api.sancta.ru'
+
+#DEBUG = False
+
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = ['engdel.ru']
+ALLOWED_HOSTS = ['engdel.ru', '127.0.0.1']
 
 
 TIME_ZONE = 'Europe/Moscow'
@@ -54,7 +62,7 @@ STATIC_ROOT = os.path.abspath(
     os.path.join(_PATH, '../', 'files', 'collected_static')
 )
 STATIC_URL = '/static/'
-STATICFILES_DIRS = ()
+STATICFILES_DIRS = (MEDIA_ROOT,)
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
@@ -96,7 +104,7 @@ WSGI_APPLICATION = 'frgn.wsgi.application'
 
 CACHE_API_TIMEOUT = 60*60*24*3
 CACHE_API_TIMEOUT_FAST = 60*1
-API_URL = 'http://admin2.sancta.ru'
+
 
 CACHES = {
     'default': {
@@ -117,20 +125,15 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'south',
     'frontend',
-    'compressor'
+    'djcompass'
 )
 
-# compressor
-COMPRESS_REBUILD_TIMEOUT = 1
-COMPRESS_ENABLED = True
-COMPRESS_OUTPUT_DIR = 'min'
-COMPRESS_PRECOMPILERS = (
-    ('text/coffeescript', 'coffee --compile --stdio'),
-    ('text/less', 'lessc {infile} {outfile}'),
-    ('text/x-sass', 'sass {infile} {outfile}'),
-    ('text/x-scss', 'sass --scss {infile} {outfile}'),
-    ('text/stylus', 'stylus < {infile} > {outfile}'),
-)
+COMPASS_INPUT = os.path.abspath(os.path.join(MEDIA_ROOT, 'scss'))
+COMPASS_OUTPUT = os.path.abspath(os.path.join(MEDIA_ROOT, 'css'))
+COMPASS_STYLE = 'compressed'
+#COMPASS_REQUIRES = (
+#    'ninesixty',  # 960.gs Grid System
+#)
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to

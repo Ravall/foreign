@@ -131,3 +131,11 @@ def article(request, article_name):
         },
         context_instance=RequestContext(request)
     )
+
+def page(request):
+    return render_to_response(
+        'frontend/about.html',
+        {
+        },
+        context_instance=RequestContext(request)
+    )
