@@ -11,11 +11,9 @@ TEMPLATE_DEBUG = DEBUG
 # отправка на почту писем о поломанных ссылках
 SEND_BROKEN_LINK_EMAILS = True
 
-SERVER_EMAIL = 'valery.ravall@gmail.com'
-ADMINS = (
-    ('Ravall', SERVER_EMAIL),
-)
-MANAGERS = ADMINS
+SERVER_EMAIL = 'robot@engdel.ru'
+MANAGERS = (('Ravall', 'valery.ravall@gmail.com'),)
+ADMINS = MANAGERS
 
 if DEBUG:
     DATABASES = {
@@ -33,7 +31,7 @@ else:
 
 API_URL = 'http://api.sancta.local' if not DEBUG else 'http://api.sancta.ru'
 
-#DEBUG = False
+DEBUG = False
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
@@ -95,6 +93,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'django.contrib.redirects.middleware.RedirectFallbackMiddleware',
 
 )
 
@@ -124,9 +123,11 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
+    'django.contrib.redirects',
     'south',
     'frontend',
-    'djcompass'
+    'djcompass',
+
 )
 
 COMPASS_INPUT = os.path.abspath(os.path.join(MEDIA_ROOT, 'scss'))
