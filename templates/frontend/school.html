@@ -1,0 +1,35 @@
+{% extends 'frontend/category_layout.html' %}
+{% load static %}
+{% load url from future %}
+
+{% block page_title %}
+    DAISY SCHOOL MOSCOW. Курсы иностранного языка
+{% endblock %}
+
+{% block tilte_category %}
+    DAISY SCHOOL MOSCOW
+{% endblock %}
+
+{% block tilte_category_description %}{% endblock %}
+
+{% block category_class %}article{% endblock %}
+
+{% block img_category %}{% endblock %}
+
+{% block category_list %}
+<div class='small-3 large-3 columns '>
+    <ul>
+        {% for art in school %}
+        <li {% if art.name == about_content.name %}class='active'{% endif %}>
+            <a href="{% url 'school_article' art.name %}">{{ art.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+<div class='small-9 large-9 columns article_content'>
+    <h2>{{ about_content.text.title }}</h2>
+    {% autoescape off %}
+    {{ about_content.text.content }}
+    {% endautoescape %}
+</div>
+{% endblock %}
