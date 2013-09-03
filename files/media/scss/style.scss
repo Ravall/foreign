@@ -124,6 +124,27 @@ body {
 
 
     }
+    div#school {
+        margin-top: 20px;
+        border-top: 5px solid #2c3e50;
+        border-bottom: 5px solid #2c3e50;
+        background: #fff;
+        text-align: center;
+        a {
+            text-decoration: none;
+            h2,h3 {
+                margin: 0px;
+                padding: 0px;
+            }
+            &:hover {
+               h2,h3 {
+                   color:#3498db;
+
+               }
+
+            }
+        }
+    }
     div#articles {
         padding-top:30px;
         padding-bottom:30px;
@@ -234,6 +255,12 @@ body {
             padding-top:16px;
             a {
                 font-size:18px;
+            }
+        }
+        li.active {
+            a {
+                color:#2c3e50;
+                text-decoration: none;
             }
         }
         min-height: 300px;
