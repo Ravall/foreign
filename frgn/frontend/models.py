@@ -14,9 +14,9 @@ class Contact(models.Model): # тема, имя отправителя, мэйл
         super(Contact, self).save()
         mail_managers(
             u'В базу добавлен новый репетитр.',
-            u"Имя: {0}"
-            u"Телефон:{1}; Email {2}"
-            u"О себе {3}".format(
+            u"Имя: {0} \n"
+            u"Телефон:{1}; Email {2} \n"
+            u"О себе: {3} \n".format(
                 self.name, self.email, self.phone, self.text
             ),
             fail_silently=True
