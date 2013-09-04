@@ -1,0 +1,30 @@
+{% extends 'frontend/school/school_layout.html' %}
+{% load static %}
+{% block school_content %}
+{% if messages %}
+<div data-alert class="alert-box success">
+    {% for message in messages %}
+        {{ message }}
+    {% endfor %}
+</div>
+{% endif %}
+    <h2>Заявка на обучение</h2>
+    <p>{{ about_content.text.content }}</p>
+    <form method="POST" class="custom">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Отправить" class='button'>
+    </form>
+
+{% endblock %}
+
+
+{% block block_js %}
+{{ block.super }}
+<script src="{% static "js/jquery.maskedinput.js" %}"></script>
+<script>
+    $(document).ready(function() {
+        $("#id_phone").mask("8(999)999-99-99");
+    })
+</script>
+{% endblock %}

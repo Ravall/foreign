@@ -10,13 +10,54 @@
     <title>{% block page_title %}{% endblock %} | Изучение английского языка</title>
     <link type="text/css" rel="stylesheet" href="{% static "css/style.css" %}" charset="utf-8">
     <script src="{% static "js/jquery-2.0.0.min.js" %}"></script>
-    <script src="{% static "js/foundation/index.js" %}"></script>
+
+    <script src="{% static "js/foundation/foundation.js" %}"></script>
+  <!--  <script src="{% static "js/foundation/foundation.alerts.js" %}"></script> -->
+  <!--  <script src="{% static "js/foundation/foundation.clearing.js" %}"></script> -->
+  <!--  <script src="{% static "js/foundation/foundation.cookie.js" %}"></script> -->
+  <!--  <script src="{% static "js/foundation/foundation.dropdown.js" %}"></script> -->
+    <script src="{% static "js/foundation/foundation.forms.js" %}"></script>
+  <!--  <script src="{% static "js/foundation/foundation.joyride.js" %}"></script> -->
+  <!--  <script src="{% static "js/foundation/foundation.magellan.js" %}"></script> -->
+  <!--  <script src="{% static "js/foundation/foundation.orbit.js" %}"></script> -->
+  <!--  <script src="{% static "js/foundation/foundation.placeholder.js" %}"></script> -->
+  <!--  <script src="{% static "js/foundation/foundation.reveal.js" %}"></script> -->
+  <!--  <script src="{% static "js/foundation/foundation.section.js" %}"></script> -->
+  <!--  <script src="{% static "js/foundation/foundation.tooltips.js" %}"></script> -->
+  <!--  <script src="{% static "js/foundation/foundation.topbar.js" %}"></script> -->
 </head>
-    <body>{% block content %}{% endblock %}</body>
+<body>
+  {% block content %}{% endblock %}
+  <div id='footer'>
+      <div class='row'>
+        <div id='copy'>
+            Изучаем английский язык.<br/>&copy; 2013.
+        </div>
+        <div id='sections'>
+            <ul>
+                <li><a href='{% url 'theoretics' %}'>Теория</a></li>
+                <li><a href='{% url 'practice' %}'>Практика</a></li>
+               <!-- <li><a href=''>Сервисы</a></li> -->
+                <li><a href='{% url 'psi' %}'>Психология обучения</a></li>
+                <li><a href='{% url 'methods' %}'>Методики обучения</a></li>
+                <li><a href='{% url 'linguistics' %}'>Языкознание</a></li>
+            </ul>
+        </div>
+        <div class='other_links'>
+            <ul>
+                <li><a href='{% url 'school' %}'>Курсы иностранного языка</a></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+
+    </body>
 </html>
 
 {% block block_js %}{% endblock %}
-
+<script type="text/javascript">
+    $(document).foundation();
+</script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
 (function (d, w, c) {

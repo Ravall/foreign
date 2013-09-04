@@ -4,6 +4,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from frontend import views
+from frontend.views import school
 
 # pylint: disable=C0103
 urlpatterns = patterns(
@@ -39,12 +40,21 @@ urlpatterns = patterns(
         views.article,
         name='article'
     ),
-    url(r'^school/$', views.school, {'article_name': 'o_nas_kursy_daisy'}, name='school'),
     url(
-        r'^school/vakansii_kursy_daisy$', views.school_job,
+        r'^school/$', school.school,
+        {'article_name': 'o_nas_kursy_daisy'}, name='school'
+    ),
+    url(
+        r'^school/vakansii_kursy_daisy$', school.school_job,
         {'article_name': 'vakansii_kursy_daisy'}, name='school_job'
     ),
-    url(r'^school/(?P<article_name>[0-9a-z_]+)', views.school, name='school_article'),
+    url(
+        r'^school/study$', school.school_study, name='school_study'
+    ),
+    url(
+        r'^school/(?P<article_name>[0-9a-z_]+)', school.school,
+        name='school_article'
+    ),
 
 
 

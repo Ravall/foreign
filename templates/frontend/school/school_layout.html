@@ -24,6 +24,9 @@
             <a href="{% url 'school_article' art.name %}">{{ art.title }}</a>
         </li>
         {% endfor %}
+        <li {% if page == 'study' %}class='active'{% endif %}>
+             <a href="{% url 'school_study' %}">Заявка на обучение</a>
+        </li>
     </ul>
 </div>
 <div class='small-9 large-9 columns article_content'>

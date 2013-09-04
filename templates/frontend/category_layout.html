@@ -20,6 +20,9 @@
         <div class=' small-11 large-11 columns'>
             <div class='navigation'>
                 <ul>
+                    <li {% if category == 'school' %}class='active'{% endif %}>
+                        <a href='{% url 'school' %}'>Курсы</a>
+                    </li>
                     <li {% if category == 'theoretics' %}class='active'{% endif %}>
                         <a href='{% url 'theoretics' %}'>Теория</a>
                     </li>
@@ -34,9 +37,6 @@
                     </li>
                     <li {% if category == 'linguistics' %}class='active'{% endif %}>
                         <a href='{% url 'linguistics' %}'>Языкознание</a>
-                    </li>
-                    <li {% if category == 'school' %}class='active'{% endif %}>
-                        <a href='{% url 'school' %}'>Курсы</a>
                     </li>
                 </ul>
             </div>
@@ -54,28 +54,6 @@
         {% block category_list %}{% endblock %}
     </div>
 </div>
-<div id='footer'>
-        <div class='row'>
-        <div id='copy'>
-            Изучаем английский язык.<br/>&copy; 2013.
-        </div>
-        <div id='sections'>
-            <ul>
-                <li><a href='{% url 'theoretics' %}'>Теория</a></li>
-                <li><a href='{% url 'practice' %}'>Практика</a></li>
-               <!-- <li><a href=''>Сервисы</a></li> -->
-                <li><a href='{% url 'psi' %}'>Психология обучения</a></li>
-                <li><a href='{% url 'methods' %}'>Методики обучения</a></li>
-                <li><a href='{% url 'linguistics' %}'>Языкознание</a></li>
-            </ul>
-        </div>
-        <div class='other_links'>
-            <ul>
-
-            </ul>
-        </div>
-        </div>
-    </div>
 {% endblock %}
 
 
@@ -88,19 +66,13 @@ $(document).ready(function() {
     }));
 
     $(window).scroll(function() {
-
-
         if ($(document).scrollTop() > 400) {
             $("#scrollToTop").fadeIn(250);
         } else {
             $('#scrollToTop').fadeOut(250);
         }
     });
-
-
-
 })
 </script>
-
 {% endblock %}
 
