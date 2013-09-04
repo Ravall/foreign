@@ -2,6 +2,21 @@
 /* для заголовов */
 @import url(http://fonts.googleapis.com/css?family=Tenor+Sans);
 
+textarea {
+    height: 300px;
+}
+
+ul.errorlist {
+    margin: 0px;
+    padding: 0px;
+    li {
+        line-height:10px;
+        margin: 0px;
+        padding: 0px;
+        color: #c0392b;
+        font-size: 12px;
+    }
+}
 
 @mixin clear_ul {
     /* ul без буллетов */
@@ -38,9 +53,9 @@ a {
 }
 
 @mixin category_card($blackground, $color, $color_hover) {
-    padding-top:30px;
+    padding-top:10px;
     background-color:$blackground;
-    min-height: 600px;
+    min-height: 520px;
     div.title {
         text-align:center;
         div {
@@ -109,8 +124,8 @@ div.navigation {
 body {
     /* --- index page ----- */
     div#theory_and_practice{
-        padding-top:30px;
-        padding-bottom:30px;
+        padding-top:20px;
+        padding-bottom:20px;
         background-color:#2c3e50;
         div#theory {
             @include category_card(#3498db, #fff, #2c3e50);
@@ -125,17 +140,19 @@ body {
 
     }
     div#school {
-        margin-top: 20px;
+        margin-top: 10px;
         border-top: 5px solid #2c3e50;
         border-bottom: 5px solid #2c3e50;
         background: #fff;
         text-align: center;
+        padding-bottom: 5px;
+        h2 {
+            margin: 0px;
+            padding: 0px;
+        }
         a {
-            text-decoration: none;
-            h2,h3 {
-                margin: 0px;
-                padding: 0px;
-            }
+            margin-top:0px;
+            padding-top: 0px;
             &:hover {
                h2,h3 {
                    color:#3498db;
@@ -166,9 +183,7 @@ body {
     /*  ----- категория ------  */
     div.category_header {
         div#engde {
-            position:absolute;
-            left:20px;
-            top:30px;
+            padding-top: 10px;
             ul li {
                 line-height: 20px;
                 a {
@@ -203,7 +218,11 @@ body {
             color:#fff;
             font-size:30px;
             text-transform: uppercase;
+            a {
+                color:#fff;
+            }
         }
+
         div.description {
             color:#fff;
             font-style:italic;
