@@ -4,43 +4,49 @@
 
 {% block content %}
 <div class='category_header {% block category_class %}{% endblock %}'>
-    <div id='engde'>
-        <ul>
-            <li id='eng'>
-                <a class='site' href='{% url 'index' %}'>eng</a>
-                <div>
-                    <strong>
-                        Изучение<br/>английского языка
-                    </strong>
-                </div>
-            </li>
-        </ul>
-    </div>
     <div class='row'>
-        <div class='navigation'>
+        <div id='engde' class='small-1 large-1 columns'>
             <ul>
-                <li {% if category == 'theoretics' %}class='active'{% endif %}>
-                    <a href='{% url 'theoretics' %}'>Теория</a>
-                </li>
-                <li {% if category == 'practice' %}class='active'{% endif %}>
-                    <a href='{% url 'practice' %}'>Практика</a>
-                </li>
-                <li {% if category == 'psi' %}class='active'{% endif %}>
-                    <a href='{% url 'psi' %}'>Психология обучения</a>
-                </li>
-                <li {% if category == 'methods' %}class='active'{% endif %}>
-                    <a href='{% url 'methods' %}'>Методики обучения</a>
-                </li>
-                <li {% if category == 'linguistics' %}class='active'{% endif %}>
-                    <a href='{% url 'linguistics' %}'>Языкознание</a>
+                <li id='eng'>
+                    <a class='site' href='{% url 'index' %}'>eng</a>
+                    <div>
+                        <strong>
+                            Изучение<br/>английского языка
+                        </strong>
+                    </div>
                 </li>
             </ul>
         </div>
-        {% block img_category %}{% endblock %}
-        <h1>{% block tilte_category %}{% endblock %}</h1>
-        <div class='description'>
-            {% block tilte_category_description %}{%endblock%}
+        <div class=' small-11 large-11 columns'>
+            <div class='navigation'>
+                <ul>
+                    <li {% if category == 'theoretics' %}class='active'{% endif %}>
+                        <a href='{% url 'theoretics' %}'>Теория</a>
+                    </li>
+                    <li {% if category == 'practice' %}class='active'{% endif %}>
+                        <a href='{% url 'practice' %}'>Практика</a>
+                    </li>
+                    <li {% if category == 'psi' %}class='active'{% endif %}>
+                        <a href='{% url 'psi' %}'>Психология обучения</a>
+                    </li>
+                    <li {% if category == 'methods' %}class='active'{% endif %}>
+                        <a href='{% url 'methods' %}'>Методики обучения</a>
+                    </li>
+                    <li {% if category == 'linguistics' %}class='active'{% endif %}>
+                        <a href='{% url 'linguistics' %}'>Языкознание</a>
+                    </li>
+                    <li {% if category == 'school' %}class='active'{% endif %}>
+                        <a href='{% url 'school' %}'>Курсы</a>
+                    </li>
+                </ul>
+            </div>
+            {% block img_category %}{% endblock %}
+            <h1>{% block tilte_category %}{% endblock %}</h1>
+            <div class='description'>
+                {% block tilte_category_description %}{%endblock%}
+            </div>
         </div>
+
     </div>
 </div>
 <div id='category_list'>
@@ -82,13 +88,19 @@ $(document).ready(function() {
     }));
 
     $(window).scroll(function() {
+
+
         if ($(document).scrollTop() > 400) {
             $("#scrollToTop").fadeIn(250);
         } else {
             $('#scrollToTop').fadeOut(250);
         }
     });
+
+
+
 })
 </script>
+
 {% endblock %}
 
