@@ -39,12 +39,11 @@ urlpatterns = patterns(
         views.article,
         name='article'
     ),
-    url(
-        r'^page/about$',
-        views.page,
-        name='page'
-    ),
     url(r'^school/$', views.school, {'article_name': 'o_nas_kursy_daisy'}, name='school'),
+    url(
+        r'^school/vakansii_kursy_daisy$', views.school_job,
+        {'article_name': 'vakansii_kursy_daisy'}, name='school_job'
+    ),
     url(r'^school/(?P<article_name>[0-9a-z_]+)', views.school, name='school_article'),
 
 

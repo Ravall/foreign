@@ -9,12 +9,15 @@ DEBUG = platform.node() != 'sancta'
 TEMPLATE_DEBUG = DEBUG
 
 # отправка на почту писем о поломанных ссылках
-SEND_BROKEN_LINK_EMAILS = True
+
 
 SERVER_EMAIL = 'robot@engdel.ru'
 DEFAULT_FROM_EMAIL = SERVER_EMAIL
-MANAGERS = (('Ravall', 'valery.ravall@gmail.com'),)
-ADMINS = MANAGERS
+MANAGERS = (
+    ('Ravall', 'valery.ravall@gmail.com'),
+    ('Ksenia', 'ksenyam@yandex.ru')
+)
+ADMINS = (('Ravall', 'valery.ravall@gmail.com'),)
 
 if DEBUG:
     DATABASES = {
@@ -85,6 +88,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.media',
     'django.core.context_processors.i18n',
     'django.core.context_processors.static',
+    'django.contrib.messages.context_processors.messages'
 )
 
 
@@ -97,6 +101,8 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.redirects.middleware.RedirectFallbackMiddleware',
 
 )
+
+MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
 
 ROOT_URLCONF = 'frgn.urls'
 
