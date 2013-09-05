@@ -1,9 +1,16 @@
+$total-columns: 24;
 @import "foundation/foundation.scss";
 /* для заголовов */
 @import url(http://fonts.googleapis.com/css?family=Tenor+Sans);
 
+
+
 textarea {
     height: 300px;
+}
+
+.full-width {
+  max-width: 100%;
 }
 
 ul.errorlist {
@@ -55,7 +62,7 @@ a {
 @mixin category_card($blackground, $color, $color_hover) {
     padding-top:10px;
     background-color:$blackground;
-    min-height: 520px;
+    min-height: 530px;
     div.title {
         text-align:center;
         div {
@@ -99,8 +106,8 @@ div.navigation {
     text-align:center;
     padding-left: 0px;
     @extend .columns;
-    @extend .small-12;
-    @extend .large-12;
+    @extend .small-24;
+    @extend .large-24;
     ul {
         display: inline-block;
         margin: 0;
@@ -309,21 +316,20 @@ body {
 
         div#copy {
             @extend .columns;
-            @extend .push-1;
-            @extend .small-4;
-            @extend .large-4;
+            @extend .small-8;
+            @extend .large-8;
         }
 
         div#sections {
             @extend .columns;
-            @extend .small-4;
-            @extend .large-4;
+            @extend .small-8;
+            @extend .large-8;
         }
 
         div#other_links {
             @extend .columns;
-            @extend .small-4;
-            @extend .large-4;
+            @extend .small-8;
+            @extend .large-8;
         }
     }
 
