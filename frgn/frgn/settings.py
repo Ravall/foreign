@@ -99,7 +99,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.contrib.redirects.middleware.RedirectFallbackMiddleware',
-
+    'raven.contrib.django.raven_compat.middleware.Sentry404CatchMiddleware'
 )
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
@@ -134,6 +134,7 @@ INSTALLED_APPS = (
     'south',
     'frontend',
     'djcompass',
+    'raven.contrib.django.raven_compat'
 
 )
 
@@ -175,3 +176,7 @@ LOGGING = {
 
 
 FRON_MAX_COUNT_ARTICLES = 5
+
+RAVEN_CONFIG = {
+    'dsn': 'http://a7f3aec4c80e4d0c9fdea3a156280c1c:62b0a9cf0ce2458b815f7d327a5ca841@sentry.sancta.ru/2',
+}
