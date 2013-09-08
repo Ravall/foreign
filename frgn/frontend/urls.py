@@ -5,6 +5,7 @@ from django.conf.urls.static import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from frontend import views
 from frontend.views import school
+from frontend.views import sitemap
 
 # pylint: disable=C0103
 urlpatterns = patterns(
@@ -55,8 +56,10 @@ urlpatterns = patterns(
         r'^school/(?P<article_name>[0-9a-z_]+)', school.school,
         name='school_article'
     ),
-
-
+    url(
+        r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap',
+        {'sitemaps': sitemap.sitemaps}
+    )
 
 )
 

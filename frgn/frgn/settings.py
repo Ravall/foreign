@@ -79,6 +79,7 @@ SECRET_KEY = 'q++(wdjbc8r4a^uvt2no3(gy-#gw)b34xdfz2_4-#q$o-67%ao'
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
+   # 'django.template.loaders.app_directories.load_template_source'
 )
 TEMPLATE_DIRS = (
     os.path.join(_PATH, '../', 'templates'),
@@ -134,8 +135,10 @@ INSTALLED_APPS = (
     'south',
     'frontend',
     'djcompass',
-    'raven.contrib.django.raven_compat'
-
+    'raven.contrib.django.raven_compat',
+    'robots_txt',
+    'favicon',
+    'django.contrib.sitemaps'
 )
 
 COMPASS_INPUT = os.path.abspath(os.path.join(MEDIA_ROOT, 'scss'))
@@ -180,3 +183,7 @@ FRON_MAX_COUNT_ARTICLES = 5
 RAVEN_CONFIG = {
     'dsn': 'http://a7f3aec4c80e4d0c9fdea3a156280c1c:62b0a9cf0ce2458b815f7d327a5ca841@sentry.sancta.ru/2',
 }
+
+FAVICON_PATH = STATIC_URL + 'img/favicon.ico'
+
+MAIN_CATEGORY = ['theoretics', 'practice', 'linguistics', 'methods', 'psi']
