@@ -1,0 +1,5 @@
+User-Agent: *
+Disallow: /admin/
+Disallow:
+
+Sitemap: http://engdel.ru/sitemap.xml

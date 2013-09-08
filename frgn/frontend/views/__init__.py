@@ -116,7 +116,7 @@ def index(request):
 
 def article(request, article_name):
     def get_main_tag(tags):
-        for tag in ('theoretics', 'practice', 'linguistics', 'methods', 'psi'):
+        for tag in settings.MAIN_CATEGORY:
             if tag in tags:
                 return tag
         return ''
@@ -127,6 +127,8 @@ def article(request, article_name):
     if not content:
         raise Http404
     content = json.loads(content)
+    if not get_main_tag(content['tags']):
+        raise Http404
     return render_to_response(
         'frontend/article.html',
         {
@@ -135,7 +137,3 @@ def article(request, article_name):
         },
         context_instance=RequestContext(request)
     )
-
-
-
-
