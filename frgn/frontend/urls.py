@@ -5,6 +5,7 @@ from django.conf.urls.static import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from frontend import views
 from frontend.views import school
+from frontend.views import words
 from frontend.views import sitemap
 
 # pylint: disable=C0103
@@ -59,6 +60,9 @@ urlpatterns = patterns(
     url(
         r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap',
         {'sitemaps': sitemap.sitemaps}
+    )
+    url(
+        r'words/', words.index, name='words'
     )
 
 )

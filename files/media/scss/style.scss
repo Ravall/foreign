@@ -129,6 +129,20 @@ div.navigation {
 }
 
 body {
+    div#training{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color:#f39c12;
+        div#user{
+            @include category_card(#f39c12, #000, #2c3e50);
+            min-height: 200px;
+        }
+        div#texts {
+            @include category_card(#f39c12, #000, #2c3e50);
+            min-height: 200px;
+            padding-top: 70px;
+        }
+    }
     /* --- index page ----- */
     div#theory_and_practice{
         padding-top:20px;

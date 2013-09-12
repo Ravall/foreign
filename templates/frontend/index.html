@@ -8,7 +8,32 @@
 {% endblock %}
 
 {% block content %}
+<div id='training'>
+  <div class='row'>
+      <div id='user' class='small-8 large-7 columns'>
+        <div class='title'>
+            <h2>Обучение</h2>
+            <img src='{% static 'img/user.png' %}' width="150px">
+            <div>
+                Тренировочные материалы, для самостоятельной работы
+            </div>
+        </div>
+      </div>
 
+      <div class='small-8 large-7 large-offset-1 columns' id='texts'>
+        <ul>
+          <li><a href='#{% url 'words' art.name %}'>Список английских слов по темам</a></li>
+          <li><a href='#'>Тексты на английском языке</a></li>
+          <li><a href='#'>Книги на английском языке</a></li>
+        </ul>
+      </div>
+
+      <div class='small-8 large-8 columns '>
+
+      </div>
+      <div class='large-1'>&nbsp;</div>
+  </div>
+</div>
 <div id='theory_and_practice'>
     <div class='row'>
 
