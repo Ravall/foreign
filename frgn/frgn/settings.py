@@ -117,7 +117,7 @@ CACHE_API_TIMEOUT_FAST = 60*1
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
-        'LOCATION': '/home/var/cache/'
+        'LOCATION': '/home/var/cache/' if not DEBUG else '/tmp/'
     },
 }
 

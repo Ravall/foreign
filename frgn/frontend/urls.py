@@ -60,9 +60,9 @@ urlpatterns = patterns(
     url(
         r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap',
         {'sitemaps': sitemap.sitemaps}
-    )
+    ),
     url(
-        r'words/', words.index, name='words'
+        r'words/', words.index, name='training_words'
     )
 
 )

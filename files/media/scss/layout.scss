@@ -1,0 +1,181 @@
+@import "foundation/foundation.scss";
+
+div.title {
+    img {
+        width: 150px;
+    }
+}
+
+/* экраны */
+@media screen and (min-width: 1024px) {
+    div#training {
+        div.content_row {
+            @include grid-row();
+            div#user {
+                @include grid-column(7)
+            }
+            div#text_and_serivces {
+                @include grid-column(14);
+                div#texts {
+                    @include grid-column(12)
+                }
+                div#services {
+                    @include grid-column(12)
+                }
+
+            }
+            div#last {
+                @include grid-column(1, true)
+            }
+        }
+    }
+    div#theory_and_practice {
+        div.content_row {
+            @include grid-row();
+            div#theory, div#practica {
+                min-height: 600px;
+            }
+            div#theory {
+                @include grid-column(8, false, false, 3)
+            }
+            div#practica {
+                @include grid-column(8, false, false, 2)
+            }
+            div#last {
+                @include grid-column(3, true)
+            }
+        }
+    }
+    div#articles {
+        div.content_row {
+            @include grid-row();
+            max-width: 100%;
+            div#psi, div#methods, div#linguistics {
+                border-width: 10px;
+                min-height: 600px;
+            }
+            div#psi{
+                @include grid-column(6, false, false, 1);
+            }
+            div#methods{
+                @include grid-column(6, false, false, 2);
+            }
+            div#linguistics{
+                @include grid-column(6, false, false, 2);
+            }
+            div#last {
+                @include grid-column(1, true);
+            }
+        }
+    }
+    /* меню */
+    div.category_header {
+        div.row {
+            div#engde {
+                @include grid-column(2)
+            }
+            div#nav{
+                @include grid-column(22, true);
+            }
+        }
+    }
+}
+
+/* планшеты */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    div#training {
+        div.content_row {
+            @include grid-row();
+            div#user {
+                @include grid-column(8)
+            }
+            div#text_and_serivces {
+                @include grid-column(14);
+                div#texts {
+                    @include grid-column(24)
+                }
+                div#services {
+                    @include grid-column(24)
+                }
+            }
+            div#last {}
+        }
+    }
+    div#theory_and_practice {
+        div.content_row {
+            div#theory, div#practica {
+                min-height: 550px;
+            }
+            div#theory {
+                @include grid-column(12)
+            }
+            div#practica {
+                @include grid-column(12, true)
+            }
+            div#last {}
+        }
+    }
+    div#articles {
+        div#psi, div#methods, div#linguistics {
+            border-width: 2px;
+            min-height: 600px;
+        }
+        div#psi{
+            @include grid-column(8);
+        }
+        div#methods{
+            @include grid-column(8);
+        }
+        div#linguistics{
+            @include grid-column(8, true);
+        }
+        div#last {
+        }
+    }
+}
+
+/* телефоны */
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    div#training {
+        div#user, div#texts, div#services {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+    div#theory_and_practice {
+        div#theory, div#practica {
+            padding-left: 10px;
+            padding-right: 10px;
+            min-height: none;
+            padding-bottom: 10px;
+        }
+    }
+    div#articles {
+        div#psi, div#methods, div#linguistics {
+            border-width: 1px;
+            padding-left: 10px;
+            padding-right: 10px;
+            min-height: none;
+        }
+        div.content_row {
+            div#theory {}
+            div#practica {}
+            div#last {}
+        }
+    }
+}
+
+/* хня какая-то */
+@media screen and (man-width: 320px) {
+
+}
+
+
+
+
+
+
+
+
+
+
