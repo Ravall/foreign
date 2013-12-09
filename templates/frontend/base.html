@@ -1,22 +1,24 @@
 {% load static %}
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-        "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<!--[if gt IE 8]><!--><html lang="en"> <!--<![endif]-->
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <!-- Set the viewport width to device width for mobile -->
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width">
     <title>{% block page_title %}{% endblock %} | Изучение английского языка</title>
     <link type="text/css" rel="stylesheet" href="{% static "css/style.css" %}" charset="utf-8">
-    <script src="{% static "js/jquery-2.0.0.min.js" %}"></script>
-
-    <script src="{% static "js/foundation/foundation.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/jquery-2.0.0.min.js" %}"></script>
+    <meta
+      name="description"
+      content="{% block meta_description %}Изучение английского языка{% endblock %}"
+    >
+    <script type="text/javascript" src="{% static "js/foundation/foundation.js" %}"></script>
   <!--  <script src="{% static "js/foundation/foundation.alerts.js" %}"></script> -->
   <!--  <script src="{% static "js/foundation/foundation.clearing.js" %}"></script> -->
   <!--  <script src="{% static "js/foundation/foundation.cookie.js" %}"></script> -->
   <!--  <script src="{% static "js/foundation/foundation.dropdown.js" %}"></script> -->
-    <script src="{% static "js/foundation/foundation.forms.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/foundation/foundation.forms.js" %}"></script>
   <!--  <script src="{% static "js/foundation/foundation.joyride.js" %}"></script> -->
   <!--  <script src="{% static "js/foundation/foundation.magellan.js" %}"></script> -->
   <!--  <script src="{% static "js/foundation/foundation.orbit.js" %}"></script> -->
@@ -33,13 +35,12 @@
   <div id='footer'>
       <div class='row'>
         <div id='copy'>
-            Изучаем английский язык.<br/>&copy; 2013.
+            Изучаем английский язык.<insertBefore>&copy; 2013.
         </div>
         <div id='sections'>
             <ul>
                 <li><a href='{% url 'theoretics' %}'>Теория</a></li>
                 <li><a href='{% url 'practice' %}'>Практика</a></li>
-               <!-- <li><a href=''>Сервисы</a></li> -->
                 <li><a href='{% url 'psi' %}'>Психология обучения</a></li>
                 <li><a href='{% url 'methods' %}'>Методики обучения</a></li>
                 <li><a href='{% url 'linguistics' %}'>Языкознание</a></li>
@@ -85,5 +86,5 @@
     } else { f(); }
 })(document, window, "yandex_metrika_callbacks");
 </script>
-<noscript><div><img src="//mc.yandex.ru/watch/21646183" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<noscript><div><img src="//mc.yandex.ru/watch/21646183" style="position:absolute; left:-9999px;" alt=""></div></noscript>
 <!-- /Yandex.Metrika counter -->

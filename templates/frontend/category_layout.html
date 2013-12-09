@@ -5,7 +5,7 @@
 {% block content %}
 <div class='category_header {% block category_class %}{% endblock %}'>
     <div class='row'>
-        <div id='engde' class='small-2 large-2 columns'>
+        <div id='engde'>
             <ul>
                 <li id='eng'>
                     <a class='site' href='{% url 'index' %}'>eng</a>
@@ -17,11 +17,11 @@
                 </li>
             </ul>
         </div>
-        <div class=' small-22 large-22 columns'>
+        <div id='nav'>
             <div class='navigation'>
                 <ul>
-                    <li {% if category == 'school' %}class='active'{% endif %}>
-                        <a href='{% url 'school' %}'>Курсы</a>
+                    <li {% if category == 'training' %}class='active'{% endif %}>
+                        <a href='{% url 'training' %}'>Обучение</a>
                     </li>
                     <li {% if category == 'theoretics' %}class='active'{% endif %}>
                         <a href='{% url 'theoretics' %}'>Теория</a>
