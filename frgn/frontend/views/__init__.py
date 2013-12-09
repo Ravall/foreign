@@ -137,3 +137,10 @@ def article(request, article_name):
         },
         context_instance=RequestContext(request)
     )
+
+def training(request):
+    return render_to_response(
+        'frontend/training/index.html',
+        {'category':'training'},
+        context_instance=RequestContext(request)
+    )

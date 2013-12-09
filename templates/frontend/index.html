@@ -9,10 +9,34 @@
 
 {% block content %}
 
-<div id='theory_and_practice'>
+<div id='training'><div class='content_row'>
+<div id='user'>
+    <div class='title'>
+        <h2>Самостоятельное обучение</h2>
+        <img src='{% static 'img/user.png' %}'>
+        <div>
+            Тренировочные материалы, для самостоятельной работы
+        </div>
+    </div>
+</div>
+<div id='text_and_serivces'>
     <div class='row'>
+        <div id='texts' id='texts'>
+            <ul>
+            <li><a href='{% url 'training_words' %}'>Список английских слов по темам</a></li>
+            <li><a href='#'>Тексты на английском языке</a></li>
+            <li><a href='{% url 'training_books' %}'>Книги на английском языке</a></li>
+            </ul>
+        </div>
+        <div id='services'>&nbsp;</div>
+    </div>
+</div>
+<div id='last'>&nbsp;</div>
+</div></div>
 
-        <div id='theory' class='small-12 large-8 large-offset-3 columns '>
+<div id='theory_and_practice'>
+    <div class='content_row'>
+        <div id='theory'>
             <div class='title'>
                 <h2>Теория</h2>
                 <img
@@ -35,8 +59,7 @@
                 </li>
             </ul>
         </div>
-
-        <div id='practica' class='small-12 large-8 large-offset-2 columns '>
+        <div id='practica'>
             <div class='title'>
                 <h2>Практика</h2>
                 <img
@@ -60,11 +83,7 @@
                 </li>
             </ul>
         </div>
-        <div id='large-3'>&nbsp;</div>
-
-
-
-
+        <div id='last'>&nbsp;</div>
     </div>
 </div>
 
@@ -76,9 +95,8 @@
 </div>
 
 <div id='articles'>
-    <div class='row full-width'>
-
-        <div id='psi' class='small-8 large-6 large-offset-1 columns '>
+    <div class='content_row'>
+        <div id='psi'>
             <div class='title'>
                 <h2>Психология обучения</h2>
                 <img
@@ -102,9 +120,7 @@
                 </li>
             </ul>
         </div>
-
-
-        <div id='methods' class='small-8 large-6 large-offset-2 columns '>
+        <div id='methods'>
             <div class='title'>
                 <h2>Методология</h2>
                 <img
@@ -128,10 +144,7 @@
                 </li>
             </ul>
         </div>
-
-
-
-        <div id='linguistics' class='small-8 large-6 large-offset-2 columns '>
+        <div id='linguistics'>
             <div class='title'>
                 <h2>Языкознание</h2>
                 <img
@@ -155,14 +168,11 @@
                 </li>
             </ul>
         </div>
-
-        <div class='large-1'>&nbsp;</div>
-
+        <div id='last'>&nbsp;</div>
     </div>
 </div>
-
-
-    <!--
+{% endblock %}
+   <!--
     <div class='row block'>
         <div class='small-6 large-6 columns service'>
             <div class='title'>
@@ -207,9 +217,3 @@
         </div>
     </div>
     -->
-
-
-
-
-
- {% endblock %}

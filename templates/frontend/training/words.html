@@ -1,0 +1,43 @@
+{% extends 'frontend/category_layout.html' %}
+{% load static %}
+{% load url from future %}
+
+{% block page_title %}
+    Списки слов. Самостоятельное изучение английского языка
+{% endblock %}
+
+{% block tilte_category %}Список английских слов по темам{% endblock %}
+
+{% block tilte_category_description %}
+    Самостоятельное изучение английского языка
+    <div id='submenu'>
+    материалы: <a href='{% url 'training_words' %}' class='active'>списки слов</a>,
+               <a href='#'>тексты</a>,
+               <a href='#'>книги</a>
+    </div>
+{% endblock %}
+
+{% block linguistics_class %}class='active'{% endblock %}
+{% block category_class %}category_training{% endblock %}
+
+{% block img_category %}
+    <img src='{% static 'img/user.png' %}' width="150px">
+{% endblock %}
+
+
+
+{% block category_list %}
+
+<div class='small-6 large-6 columns '>
+
+</div>
+<div class='small-18 large-18 columns article_content list_words'>
+    <h3><b>Темы слов:</b></h3>
+    {% autoescape off %}
+    {% for art in words %}
+        <a href="{% url 'word_list' art.name %}">{{ art.title }}</a>{% if not forloop.last %},{% endif %}
+    {% endfor %}
+    {% endautoescape %}
+</div>
+{% endblock %}
+
