@@ -249,6 +249,19 @@ body {
             color:#fff;
             font-style:italic;
             padding-bottom:10px;
+            div#submenu {
+                font-style: normal;
+                color:$main_bg_color;
+                a {
+                    color:$main_bg_color;
+                    &:hover {
+                        color:#FFF;
+                    }
+                }
+                a.active {
+                    color:#FFF;
+                }
+            }
         }
         div.navigation a {
             color:$main_bg_color;
@@ -260,7 +273,9 @@ body {
             color:#FFF;
         }
     }
-
+    div.category_training {
+        background-color:#f39c12;
+    }
     div.category_theory {
         background-color:#3498db;
     }
@@ -287,6 +302,36 @@ body {
     }
     div.article_content {
         padding-top:50px;
+    }
+    div.list_words {
+        table {
+            border: 0px;
+            tr {
+                &:hover {
+                    color:#f39c12;
+                    p {
+                        color:#f39c12;
+                    }
+                }
+
+                td:first-child {
+                    font-weight: bold;
+                    width: 50%;
+                    p {
+                        font-weight: bold;
+                    }
+                }
+
+                td {
+
+                    height: 10px;
+                    p {
+                        margin: 0px;
+                        padding: 0px;
+                    }
+                }
+            }
+        }
     }
 
 

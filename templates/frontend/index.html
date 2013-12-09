@@ -12,7 +12,7 @@
 <div id='training'><div class='content_row'>
 <div id='user'>
     <div class='title'>
-        <h2>Обучение</h2>
+        <h2>Самостоятельное обучение</h2>
         <img src='{% static 'img/user.png' %}'>
         <div>
             Тренировочные материалы, для самостоятельной работы
@@ -25,7 +25,7 @@
             <ul>
             <li><a href='{% url 'training_words' %}'>Список английских слов по темам</a></li>
             <li><a href='#'>Тексты на английском языке</a></li>
-            <li><a href='#'>Книги на английском языке</a></li>
+            <li><a href='{% url 'training_books' %}'>Книги на английском языке</a></li>
             </ul>
         </div>
         <div id='services'>&nbsp;</div>

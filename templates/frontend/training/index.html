@@ -9,12 +9,7 @@
 {% block tilte_category %}Список английских слов по темам{% endblock %}
 
 {% block tilte_category_description %}
-    Самостоятельное изучение английского языка
-    <div id='submenu'>
-    материалы: <a href='{% url 'training_words' %}' class='active'>списки слов</a>,
-               <a href='#'>тексты</a>,
-               <a href='#'>книги</a>
-    </div>
+Самостоятельное изучение английского языка
 {% endblock %}
 
 {% block linguistics_class %}class='active'{% endblock %}
@@ -32,11 +27,21 @@
 
 </div>
 <div class='small-18 large-18 columns article_content list_words'>
-    <h3><b>Темы слов:</b></h3>
     {% autoescape off %}
-    {% for art in words %}
-        <a href="{% url 'word_list' art.name %}">{{ art.title }}</a>{% if not forloop.last %},{% endif %}
-    {% endfor %}
+
+    <div id='submenu'>
+    <h2>материалы:</h2>
+    <p>
+        <a href='{% url 'training_words' %}' class='active'>Список английских слов по темам</a><br/>
+        <span>Списки слов по разным тематикам, бла бла бла</span>
+    </p>
+    <p>
+    <a href='#'>Тексты на английском языке</a>
+    </p>
+    <p>
+               <a href='#'>Книги на английском языке</a>
+    </p>
+    </div>
     {% endautoescape %}
 </div>
 {% endblock %}

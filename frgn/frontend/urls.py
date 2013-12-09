@@ -4,9 +4,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from frontend import views
-from frontend.views import school
-from frontend.views import words
-from frontend.views import sitemap
+from frontend.views import words,books,school,sitemap
 
 # pylint: disable=C0103
 urlpatterns = patterns(
@@ -62,8 +60,17 @@ urlpatterns = patterns(
         {'sitemaps': sitemap.sitemaps}
     ),
     url(
-        r'words/', words.index, name='training_words'
-    )
+        r'^training/$', views.training, name='training'
+    ),
+    url(
+        r'^words/$', words.index, name='training_words'
+    ),
+    url(
+        r'^words/(?P<word>[0-9a-z_]+)/$', words.word, name='word_list'
+    ),
+    url(
+        r'^books/$', books.index, name='training_books'
+    ),
 
 )
 
