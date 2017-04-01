@@ -3,8 +3,7 @@ Chameleon==2.9.2
 Django==1.5.2
 Fabric==1.5.1
 MySQL-python==1.2.3
-PIL==1.1.7
-Pillow==1.7.8
+Pillow==4
 PyYAML==3.10
 Pygments==1.6
 South==0.8.2
