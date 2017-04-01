@@ -33,7 +33,7 @@ if DEBUG:
 else:
     from production import DATABASES
 
-API_URL = 'http://api.sancta.local' if not DEBUG else 'http://api.sancta.ru'
+API_URL = 'http://api.sancta.local' if DEBUG else 'http://api.sancta.ru'
 
 #DEBUG = False
 
