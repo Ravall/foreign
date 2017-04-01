@@ -3,7 +3,7 @@ import json
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.http import Http404
-from control import utils
+from frontend import utils
 from frontend.models import ContactForm, StudentForm
 from django.contrib import messages
 from django.shortcuts import redirect

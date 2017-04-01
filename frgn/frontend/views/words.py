@@ -4,7 +4,7 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.http import Http404
 from frontend.views import _get_tag_articles
-from control import utils
+from frontend import utils
 
 def index(request):
     data = _get_tag_articles('words')

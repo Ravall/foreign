@@ -4,7 +4,7 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.http import Http404
 from django.views.decorators.cache import cache_page
-from control import utils
+from frontend import utils
 from django.conf import settings
 from frontend.models import ContactForm
 from django.contrib import messages

@@ -3,7 +3,7 @@ import json
 from django.contrib.sitemaps import Sitemap
 from django.core.urlresolvers import reverse
 from django.conf import settings
-from control import utils
+from frontend import utils
 
 class ReversItem(object):
     def __init__(self, route_name, args=[]):
